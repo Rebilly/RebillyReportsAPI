@@ -1,0 +1,17 @@
+{
+  "generator-openapi-repo": {
+    "name": "Rebilly Experimental Reports",
+    "description": "Experimental reports API",
+    "version": "0.1",
+    "email": "integrations@rebilly.com",
+    "username": "Rebilly API Support",
+    "redocVersion": "latest",
+    "travis": true,
+    "repo": "Rebilly/RebillyReportsAPI",
+    "packageName": "rebilly-openapi-spec",
+    "specVersion": "0.0.1",
+    "samples": true,
+    "installSwaggerUI": true,
+    "branchPreview": true
+  }
+}
