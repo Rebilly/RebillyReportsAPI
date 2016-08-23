@@ -10,8 +10,8 @@ properties:
         aggregationField:
           type: string
           description: Value by which the report provides retention periods and values
-        customersNumber:
-          type: number
+        customersCount:
+          type: integer
           description: Number of customers within the aggregation with their first payment
         periods:
           type: array
