@@ -7,7 +7,7 @@ properties:
       description: Contains an aggregation
       readOnly: true
       properties:
-        aggregationField:
+        aggregationValue:
           type: string
           description: Value by which the report provides retention periods and values
         customersCount:
