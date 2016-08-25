@@ -53,6 +53,6 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/HistogramData"
+        $ref: "#/definitions/ReportRetentionPercentage"
     401:
       $ref: "#/responses/AccessForbidden"
