@@ -16,7 +16,7 @@ info:
     backgroundColor: '#0033A0'
 ################################################################################
 host: "api.rebilly.com"
-basePath: "/v2.1"
+basePath: "/experimental"
 schemes:
   - "https"
 produces:

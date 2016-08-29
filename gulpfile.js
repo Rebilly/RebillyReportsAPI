@@ -14,13 +14,7 @@ gulp.task('serve', ['build', 'watch'], function() {
     connect.server({
       root: [DIST_DIR],
       livereload: true,
-      port: port,
-      middleware: function (connect, opt) {
-        return [
-          connect().use('/swagger-ui', connect.static(SWAGGER_UI_DIST)),
-          cors()
-        ]
-      }
+      port: port
     });
   });
 });
