@@ -10,8 +10,9 @@
     "repo": "Rebilly/RebillyReportsAPI",
     "packageName": "rebilly-openapi-spec",
     "specVersion": "0.0.1",
-    "samples": true,
-    "installSwaggerUI": true,
-    "branchPreview": true
+    "samples": false,
+    "installSwaggerUI": false,
+    "branchPreview": true,
+    "splitSpec": true
   }
 }
