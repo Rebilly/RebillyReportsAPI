@@ -40,22 +40,7 @@ properties:
                 type: number
                 format: double
                 description: The amount of transactions (income transactions - loss transactions)
-  forecast:
-    type: array
-    items:
-      type: object
-      description: Contains forecast values for customers retention in future aggregations
-      readOnly: true
-      properties:
-        aggregationValue:
-        type: string
-        description: |
-          Value by which the forecast provides retention periods and percentages.
-          The formats are the same as in the main data.
-        subscriptionsCount:
-          type: integer
-          description: Forecasted number of subscriptions created within the aggregation
-        periods:
+        forecastPeriods:
           type: array
           items:
             type: object
