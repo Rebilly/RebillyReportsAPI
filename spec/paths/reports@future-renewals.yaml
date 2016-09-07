@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Reports
+  summary: Retrieve a future renewals report
+  description: Retrieve a future renewals report
+  parameters:
+    - name: periodStart
+      in: query
+      description: Report start date. It should be in the future
+      type: string
+      required: true
+    - name: periodEnd
+      in: query
+      description: Report end date
+      type: string
+      required: true
+  responses:
+    200:
+      description: Report was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/FutureRenewals"
+    401:
+      $ref: "#/responses/AccessForbidden"
