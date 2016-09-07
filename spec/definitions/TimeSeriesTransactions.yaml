@@ -14,14 +14,14 @@ properties:
           type: number
           format: double
           description: Amount or count of all transactions within the aggregation
-        subAggregations:
+        subaggregates:
           type: object
-          description: SubAggregations with their transactions within the range
+          description: Subaggregates with their transactions within the range
           properties:
-            gatewayAccountId:
+            subaggregate:
               type: string
-              description: Subaggregation identifier
+              description: Subaggregate identifier
             value:
               type: number
               format: double
-              description: Amount or count of the gateway account's transactions within the aggregation
+              description: Amount or count of the subaggregate's transactions within the aggregation

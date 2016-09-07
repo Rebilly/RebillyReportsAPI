@@ -14,6 +14,13 @@ get:
         - amount
         - approval
         - incomplete
+    - name: subaggregate
+      in: query
+      description: Report subaggregate
+      required: true
+      type: string
+      enum:
+        - gatewayAccount
     - name: periodStart
       in: query
       description: Report start date
