@@ -16,7 +16,7 @@ info:
     backgroundColor: '#0033A0'
 ################################################################################
 host: "api.rebilly.com"
-basePath: "/v2.1"
+basePath: "/experimental"
 schemes:
   - "https"
 produces:
@@ -30,12 +30,6 @@ tags:
       This API is experimental and likely to change.  We would appreciate
       feedback.
 
-      The Rebilly API is built on HTTP.  Our API is RESTful.  It has predictable
-      resource URLs.  It returns HTTP response codes to indicate errors.  It also
-      accepts and returns JSON in the HTTP body.  You can use your favorite
-      HTTP/REST library for your programming language to use Rebilly's API, or
-      you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
-      and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
   - name: Authentication
     description: |
       When you sign up for an account, you are given your first API key.
@@ -64,10 +58,10 @@ tags:
 
   - name: Histograms
     description: |
-      Histograms are for particular kinds of reports.
+      Histograms are for particular kinds of reports with cohorts and periods.
   - name: Reports
     description: |
-      Collect summary information.
+      Retrieve summary information about your customers, subscriptions, transactions, and more.
 ################################################################################
 securityDefinitions:
   ApiKey:
