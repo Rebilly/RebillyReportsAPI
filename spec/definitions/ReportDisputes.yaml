@@ -10,25 +10,25 @@ properties:
             Selected aggregation field value (defined by query). It can be, for example, website or country.
             You define it in aggregationField param in query.
           type: string
-        disputesVisa:
+        countVisa:
           description: Disputes count on Visa
           type: integer
-        countPercentVisa:
+        ratioCountVisa:
           description: Disputes count / Settled transactions count
           type: number
           format: double
-        valuePercentVisa:
+        ratioValueVisa:
           description: Disputes amount / Settled transactions amount
           type: number
           format: double
-        disputesMastercard:
+        countMastercard:
           description: Disputes count on Mastercard
           type: integer
-        countPercentMastercard:
+        ratioCountMastercard:
           description: Disputes count / Settled transactions count
           type: number
           format: double
-        valuePercentMastercard:
+        ratioValueMastercard:
           description: Disputes amount / Settled transactions amount
           type: number
           format: double
