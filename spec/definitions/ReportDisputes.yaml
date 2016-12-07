@@ -17,7 +17,7 @@ properties:
           description: Disputes count / Settled transactions count
           type: number
           format: double
-        ratioValueVisa:
+        ratioAmountVisa:
           description: Disputes amount / Settled transactions amount
           type: number
           format: double
@@ -28,7 +28,7 @@ properties:
           description: Disputes count / Settled transactions count
           type: number
           format: double
-        ratioValueMastercard:
+        ratioAmountMastercard:
           description: Disputes amount / Settled transactions amount
           type: number
           format: double
