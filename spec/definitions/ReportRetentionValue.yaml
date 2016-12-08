@@ -26,7 +26,8 @@ properties:
             properties:
               period:
                 type: integer
-                description: Retention period (units) for which the retention value is presented
+                description: |
+                  Retention period (0 - first, 1 - second etc) since the beginning boundary of the aggregation
               retentionAverage:
                 type: number
                 format: double
@@ -48,7 +49,8 @@ properties:
             properties:
               period:
                 type: integer
-                description: Future retention period (units) for which the predicted retention value is presented
+                description: |
+                  Future retention period (0 - first, 1 - second etc) since the beginning boundary of the aggregation
               retentionAverage:
                 type: number
                 format: double

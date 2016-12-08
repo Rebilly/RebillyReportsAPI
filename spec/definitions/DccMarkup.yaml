@@ -33,16 +33,3 @@ properties:
           type: number
           format: double
           description: Amount of offers in the aggregation which weren't selected nor rejected
-  gatewayAccounts:
-    type: array
-    items:
-      type: object
-      description: Gateway account with DCC offers
-      readOnly: true
-      properties:
-        gatewayAccountId:
-          type: string
-          description: Identifier of the gateway account
-        offersCount:
-          type: integer
-          description: Number of offers per the selected period within the gateway account

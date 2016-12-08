@@ -16,7 +16,7 @@ properties:
         allDunningCount:
           type: integer
           description: All dunned subscriptions number
-        abandoned:
+        abandonedCount:
           type: integer
           description: Abandon subscriptions number
         paidRenewalCount:
