@@ -17,6 +17,7 @@ get:
       required: true
       type: string
       format: date-time
+    - $ref: "#/parameters/collectionFilter"
   responses:
     200:
       description: Report was retrieved successfully

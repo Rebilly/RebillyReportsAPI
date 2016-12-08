@@ -27,7 +27,8 @@ properties:
             properties:
               period:
                 type: integer
-                description: Retention period (units) for which the retention percentage is presented
+                description: |
+                  Retention period (0 - first, 1 - second etc) since the beginning boundary of the aggregation
               retentionRatio:
                 type: number
                 format: double
@@ -36,4 +37,4 @@ properties:
                   to all subscriptions created in the aggregation period
               canceledSubscriptionsCount:
                 type: integer
-                description: Number of canceled subscriptions in the given retention period
+                description: Number of canceled subscriptions within the given retention period
