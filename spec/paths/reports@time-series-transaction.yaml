@@ -20,7 +20,17 @@ get:
       required: true
       type: string
       enum:
-        - gatewayAccount
+        - website
+        - gateway-account
+        - currency
+        - leads.source
+        - leads.medium
+        - leads.campaign
+        - leads.content
+        - leads.term
+        - leads.affiliate
+        - leads.subaffiliate
+        - leads.sales-agent
     - name: periodStart
       in: query
       description: Report start date
