@@ -22,8 +22,9 @@ properties:
             readOnly: true
             properties:
               planId:
-                type: string
                 description: Plan identifier
+                allOf:
+                  - $ref: "#/definitions/ResourceId"
               count:
                 type: integer
                 description: Amount of plan's future renewals
