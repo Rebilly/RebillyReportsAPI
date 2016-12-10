@@ -5,23 +5,28 @@ items:
   readOnly: true
   properties:
     transactionId:
-      type: string
       description: Transaction's identifier
+      allOf:
+        - $ref: "#/definitions/ResourceId"
     websiteId:
-      type: string
       description: Website's identifier
+      allOf:
+        - $ref: "#/definitions/ResourceId"
     customerId:
-      type: string
       description: Customer's identifier
+      allOf:
+        - $ref: "#/definitions/ResourceId"
     customerEmail:
       type: string
       description: Customer's email
     planId:
-      type: string
       description: Plan's identifier
+      allOf:
+        - $ref: "#/definitions/ResourceId"
     subscriptionId:
-      type: string
       description: Subscription's identifier
+      allOf:
+        - $ref: "#/definitions/ResourceId"
     currency:
       type: string
       description: Transaction's currency 3-letters code
