@@ -10,10 +10,10 @@ properties:
           description: Selected aggregation field value
           type: string
         authApprovedThroughput:
-          description: Successful transactions count
+          description: Approved auth transactions to all transactions percentage
           type: integer
         approvedThroughput:
-          description: Successful transactons percentage
+          description: Approved sale transactions to all transactions percentage
           type: integer
         salesCount:
           description: Sales count

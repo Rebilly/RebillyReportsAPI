@@ -1,38 +1,9 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a retention percentage report
-  description: |
-    Retrieve a retention percentage report
+  summary: Retrieve a list of subscription renewals data
+  description: Retrieve a list of subscription renewals data
   parameters:
-    - name: aggregationField
-      in: query
-      description: Report aggregation field
-      required: true
-      type: string
-      enum:
-        - day
-        - month
-        - quarter
-        - year
-    - name: aggregationPeriod
-      in: query
-      description: Report aggregation period
-      required: true
-      type: string
-      enum:
-        - day
-        - month
-        - quarter
-        - year
-        - cycle
-    - name: includeSwitchedSubscriptions
-      in: query
-      description: If to include switched subscriptions
-      type: string
-      enum:
-        - true
-        - false
     - name: periodStart
       in: query
       description: Report start date
@@ -45,7 +16,14 @@ get:
       required: true
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
-    - $ref: "#/parameters/collectionFilter"
+    - x-rebillyMerge:
+      - $ref: "#/parameters/mediaType"
+      - enum:
+        - application/json
+        - text/csv
+  produces:
+    - application/json
+    - text/csv
   responses:
     200:
       description: Report was retrieved successfully
@@ -63,6 +41,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/ReportRetentionPercentage"
+        $ref: "#/definitions/SubscriptionRenewalList"
     401:
       $ref: "#/responses/AccessForbidden"

@@ -16,7 +16,7 @@ properties:
           description: Amount or count of all transactions within the aggregation
         subaggregates:
           type: object
-          description: Subaggregates with their transactions within the range
+          description: Subaggregates which have appropriate transactions within the range
           properties:
             subaggregate:
               type: string

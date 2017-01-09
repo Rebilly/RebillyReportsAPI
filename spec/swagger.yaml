@@ -159,6 +159,15 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+  mediaType:
+    name: Accept
+    in: header
+    type: string
+    enum:
+      - application/json
+      - text/csv
+    default: application/json
+    description: The response media type
 ################################################################################
 headers:
   Rate-Limit-Limit:
