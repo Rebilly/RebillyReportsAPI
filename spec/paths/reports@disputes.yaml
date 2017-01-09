@@ -21,11 +21,12 @@ get:
         - "gatewayAccount"
     - name: periodMonth
       in: query
-      description: Report month
+      description: Report month in format YYYY-MM
       required: true
       type: string
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
   responses:
     200:
       description: Report was retrieved successfully
@@ -36,6 +37,12 @@ get:
           $ref: "#/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
       schema:
         $ref: "#/definitions/ReportDisputes"
     401:
