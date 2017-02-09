@@ -12,8 +12,8 @@ get:
       enum:
         - count
         - amount
-        - approval
-        - incomplete
+        - approval-rate
+        - incomplete-rate
     - name: subaggregate
       in: query
       description: Report subaggregate
