@@ -20,9 +20,9 @@ get:
       required: true
       type: string
       enum:
-        - canceled-by
-        - cancel-category
-        - leads.affiliate
+        - canceledBy
+        - cancelCategory
+        - lead.affiliate
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
