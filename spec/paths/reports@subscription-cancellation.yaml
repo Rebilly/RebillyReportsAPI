@@ -1,0 +1,54 @@
+get:
+  tags:
+    - Reports
+  summary: Retrieve transactions with their plan data
+  description: Retrieve transactions with their plan data
+  parameters:
+    - name: periodStart
+      in: query
+      description: Report start date
+      type: string
+      required: true
+    - name: periodEnd
+      in: query
+      description: Report end date
+      type: string
+      required: true
+    - name: aggregationField
+      in: query
+      description: Report aggregation field
+      required: true
+      type: string
+      enum:
+        - canceled-by
+        - cancel-category
+        - leads.affiliate
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - x-rebillyMerge:
+      - $ref: "#/parameters/mediaType"
+      - enum:
+        - application/json
+  produces:
+    - application/json
+  responses:
+    200:
+      description: Report was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
+      schema:
+        $ref: "#/definitions/SubscriptionCancellation"
+    401:
+      $ref: "#/responses/AccessForbidden"
