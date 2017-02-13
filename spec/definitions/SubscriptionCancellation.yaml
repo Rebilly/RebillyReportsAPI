@@ -7,7 +7,7 @@ properties:
       description: Contains an aggregation
       readOnly: true
       properties:
-        aggregatedValue:
+        aggregationValue:
           type: string
           description: Aggregation value
         count:
