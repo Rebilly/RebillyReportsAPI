@@ -20,9 +20,18 @@ get:
       required: true
       type: string
       enum:
+        - planId
+        - websiteId
         - canceledBy
         - cancelCategory
-        - lead.affiliate
+        - leadSource.source
+        - leadSource.medium
+        - leadSource.campaign
+        - leadSource.content
+        - leadSource.term
+        - leadSource.affiliate
+        - leadSource.subAffiliate
+        - leadSource.salesAgent
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
