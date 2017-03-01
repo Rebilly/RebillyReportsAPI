@@ -19,6 +19,7 @@ get:
         - "rebillNumber"
         - "dunningIndex"
         - "gatewayAccount"
+        - "transactionAmount"
     - name: periodMonth
       in: query
       description: Report month in format YYYY-MM
