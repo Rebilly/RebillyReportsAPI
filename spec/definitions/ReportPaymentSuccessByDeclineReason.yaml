@@ -1,0 +1,18 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      description: Contains a report of successfull payments retry count by decline reason
+      readOnly: true
+      properties:
+        declineCode:
+          type: string
+          description: Decline reason code
+        declineMessage:
+          type: string
+          description: Decline reason message
+        successfullRetryCount:
+          type: number
+          description: Successfull retry count
