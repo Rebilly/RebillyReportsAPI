@@ -1,8 +1,8 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a report of payments successful retries throughput (percentage)
-  description: Retrieve a report of payments successful retries throughput (percentage)
+  summary: Retrieve a report of payments successful retries throughput
+  description: Retrieve a report of payments successful retries throughput
   parameters:
     - name: periodStart
       in: query
