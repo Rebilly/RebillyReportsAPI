@@ -1,54 +1,25 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a retention value report
+  summary: Retrieve a dispute delays in days report
   description: |
-    The retention value report shows the count of new customers
-    per aggregation bucket and the corresponding per customer value over time.
+    Retrieve a dispute delays in days report, how much time between a transaction and a dispute.
   parameters:
     - name: aggregationField
       in: query
-      description: Report aggregation field
+      description: Report will be aggregated by this field
       required: true
       type: string
       enum:
-        - day
-        - month
-        - quarter
-        - year
-        - leadsSource
-        - leadsMedium
-        - leadsCampaign
-        - leadsContent
-        - leadsTerm
-        - leadsAffiliate
-        - leadsSubAffiliate
-        - leadsSalesAgent
-    - name: aggregationPeriod
-      in: query
-      description: Report aggregation period
-      required: true
-      type: string
-      enum:
-        - day
-        - month
-        - quarter
-        - year
-        - cycle
-    - name: includeRefunds
-      in: query
-      description: If to include refunds
-      type: string
-      enum:
-        - true
-        - false
-    - name: includeDisputes
-      in: query
-      description: If to include disputes
-      type: string
-      enum:
-        - true
-        - false
+        - "website"
+        - "processor"
+        - "currency"
+        - "bin"
+        - "country"
+        - "rebillNumber"
+        - "retryNumber"
+        - "gatewayAccount"
+        - "transactionAmount"
     - name: periodStart
       in: query
       description: Report start date
@@ -80,6 +51,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/ReportRetentionValue"
+        $ref: "#/definitions/ReportDisputeDelays"
     401:
       $ref: "#/responses/AccessForbidden"

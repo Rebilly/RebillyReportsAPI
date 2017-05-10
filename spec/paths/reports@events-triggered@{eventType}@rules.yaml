@@ -1,33 +1,37 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a disputes report
+  summary: Retrieve a rules matched summary report
   description: |
-    Retrieve a disputes report
+    Retrieve a rules matched summary report by events triggered.
   parameters:
-    - name: aggregationField
-      in: query
-      description: Report will be aggregated by this field
-      required: true
+    - name: eventType
+      in: path
       type: string
+      required: true
+      description: The system event type
       enum:
-        - "website"
-        - "processor"
-        - "currency"
-        - "bin"
-        - "country"
-        - "rebillNumber"
-        - "retryNumber"
-        - "gatewayAccount"
-        - "transactionAmount"
-    - name: periodMonth
+        - dispute-created
+        - gateway-account-requested
+        - transaction-processed
+        - subscription-canceled
+        - subscription-renewed
+        - payment-card-expired
+        - payment-declined
+        - transaction-process-requested
+        - risk-score-changed
+    - name: periodStart
       in: query
-      description: Report month in format YYYY-MM
-      required: true
+      description: Report start date
       type: string
+      required: true
+    - name: periodEnd
+      in: query
+      description: Report end date
+      type: string
+      required: true
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
-    - $ref: "#/parameters/collectionFilter"
   responses:
     200:
       description: Report was retrieved successfully
@@ -45,6 +49,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/ReportDisputes"
+        $ref: "#/definitions/ReportRulesMatchedSummary"
     401:
       $ref: "#/responses/AccessForbidden"
