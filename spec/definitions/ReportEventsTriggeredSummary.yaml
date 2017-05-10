@@ -20,5 +20,5 @@ properties:
             - transaction-process-requested
             - risk-score-changed
         count:
-          description: 25th percentile
+          description: Count of event triggered
           type: integer

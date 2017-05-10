@@ -1,9 +1,9 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a dunning report
+  summary: Retrieve a payment retry report
   description: |
-    Retrieve a dunning report
+    Retrieve a payment retry report
   parameters:
     - name: periodStart
       in: query
@@ -18,6 +18,7 @@ get:
       type: string
       format: date-time
     - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionCriteria"
   responses:
     200:
       description: Report was retrieved successfully
@@ -29,6 +30,6 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/ReportDunning"
+        $ref: "#/definitions/ReportPaymentRetry"
     401:
       $ref: "#/responses/AccessForbidden"
