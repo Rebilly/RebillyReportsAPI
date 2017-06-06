@@ -4,17 +4,17 @@ properties:
     description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
     readOnly: true
     type: string
-  refunds:
+  refundsAmount:
     description: Sum of all refunded transactions
     readOnly: true
     type: number
     format: double
-  revenue:
+  revenueAmount:
     description: Sum of overall sales and captures that were approved
     readOnly: true
     type: number
     format: double
-  disputes:
+  disputesAmount:
     description: Sum of all disputed transactions
     readOnly: true
     type: number
