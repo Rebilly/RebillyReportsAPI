@@ -1,22 +1,21 @@
 type: object
 properties:
-  lifetimeMetrics:
-    description: The customer lifetime metrics
+  currency:
+    description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
     readOnly: true
-    type: object
-    properties:
-      currency:
-        description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
-        type: string
-      refunds:
-        description: Sum of all refunded transactions
-        type: number
-        format: double
-      revenue:
-        description: Sum of overall sales and captures that were approved
-        type: number
-        format: double
-      disputes:
-        description: Sum of all disputed transactions
-        type: number
-        format: double
+    type: string
+  refunds:
+    description: Sum of all refunded transactions
+    readOnly: true
+    type: number
+    format: double
+  revenue:
+    description: Sum of overall sales and captures that were approved
+    readOnly: true
+    type: number
+    format: double
+  disputes:
+    description: Sum of all disputed transactions
+    readOnly: true
+    type: number
+    format: double
