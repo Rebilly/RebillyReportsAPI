@@ -1,0 +1,19 @@
+type: object
+properties:
+  lifetimeMetrics:
+    description: The customer lifetime metrics
+    readOnly: true
+    type: object
+    properties:
+      refunds:
+        description: Sum of all refunded transactions
+        type: number
+        format: double
+      revenue:
+        description: Sum of overall sales and captures that were approved
+        type: number
+        format: double
+      disputes:
+        description: Sum of all disputed transactions
+        type: number
+        format: double
