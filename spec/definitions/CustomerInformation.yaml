@@ -5,6 +5,9 @@ properties:
     readOnly: true
     type: object
     properties:
+      currency:
+        description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
+        type: string
       refunds:
         description: Sum of all refunded transactions
         type: number
