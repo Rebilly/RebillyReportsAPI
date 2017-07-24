@@ -15,22 +15,24 @@ properties:
       - "pending"
       - "completed"
       - "error"
-  Name:
+  name:
     description: Export's name
     type: string
-  Resource:
-    description: Export's resource
+  resource:
+    description: The type of resource being exported (eg., transaction).
     type: string
-  CreatedBy:
+    readOnly: true
+  createdBy:
     description: Export's owner
     type: string
+    readOnly: true
   format:
     description: Export result format
     type: string
     enum:
       - "csv"
   arguments:
-    description: Query arguments
+    description: Export request arguments that can be passed to filter resut and/or sort result
     type: object
     properties:
       filter:
