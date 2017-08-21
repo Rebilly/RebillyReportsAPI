@@ -62,6 +62,9 @@ tags:
   - name: Reports
     description: |
       Retrieve summary information about your customers, subscriptions, transactions, and more.
+  - name: Exports
+    description: |
+      Bulk data exports
 ################################################################################
 securityDefinitions:
   ApiKey:
