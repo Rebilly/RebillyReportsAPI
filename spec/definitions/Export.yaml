@@ -16,14 +16,14 @@ properties:
       - "completed"
       - "error"
   name:
-    description: Export's name
+    description: Export name
     type: string
   resource:
     description: The type of resource being exported (eg., transaction).
     type: string
     readOnly: true
   createdBy:
-    description: Export's owner
+    description: Export owner
     type: string
     readOnly: true
   format:
@@ -32,7 +32,7 @@ properties:
     enum:
       - "csv"
   arguments:
-    description: Export request arguments that can be passed to filter resut and/or sort result
+    description: Export request arguments that can be passed to filter and/or sort the result set
     type: object
     properties:
       filter:
