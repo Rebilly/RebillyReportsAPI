@@ -52,6 +52,14 @@ properties:
     description: File URI
     readOnly: true
     type: string
+  createdBy:
+    description: The name of the user who created the export
+    readOnly: true
+    type: string
+  email:
+    description: The email of the user who created the export
+    readOnly: true
+    type: string
   createdTime:
     description: Export request created time
     allOf:
