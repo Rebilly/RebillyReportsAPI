@@ -23,9 +23,13 @@ properties:
     type: string
     readOnly: true
   createdBy:
-    description: Export owner
-    type: string
+    description: The name of the user who created the export
     readOnly: true
+    type: string
+  email:
+    description: The email of the user who created the export
+    readOnly: true
+    type: string
   format:
     description: Export result format
     type: string
@@ -50,14 +54,6 @@ properties:
         $ref: "#/definitions/Condition"
   fileUri:
     description: File URI
-    readOnly: true
-    type: string
-  createdBy:
-    description: The name of the user who created the export
-    readOnly: true
-    type: string
-  email:
-    description: The email of the user who created the export
     readOnly: true
     type: string
   createdTime:
