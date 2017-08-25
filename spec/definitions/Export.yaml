@@ -59,7 +59,7 @@ properties:
   items:
     description: The number of records in the export
     readOnly: true
-    type: int
+    type: integer
   createdTime:
     description: Export request created time
     allOf:
