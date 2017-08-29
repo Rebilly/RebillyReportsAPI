@@ -45,7 +45,7 @@ properties:
       criteria:
         $ref: "#/definitions/Condition"
   fileId:
-    description: File Id
+    description: File ID
     readOnly: true
     type: string
   createdBy:
