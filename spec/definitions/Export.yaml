@@ -13,8 +13,8 @@ properties:
     type: string
     enum:
       - "pending"
+      - "processing"
       - "completed"
-      - "error"
   name:
     description: Export name
     type: string
@@ -44,8 +44,8 @@ properties:
         description: The partial search of the text fields.
       criteria:
         $ref: "#/definitions/Condition"
-  fileUri:
-    description: File URI
+  fileId:
+    description: File ID
     readOnly: true
     type: string
   createdBy:
