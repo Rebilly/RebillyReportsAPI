@@ -1,0 +1,16 @@
+type: object
+discriminator: range-type
+properties:
+  range-type:
+    type: string
+    enum:
+      - all
+      - yesterday
+      - previous-week
+      - previous-month
+      - previous-year
+      - current-week
+      - current-month
+      - current-year
+      - custom
+    default: previous-month
