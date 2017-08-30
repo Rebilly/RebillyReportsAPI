@@ -44,6 +44,9 @@ properties:
         description: The partial search of the text fields.
       criteria:
         $ref: "#/definitions/Condition"
+  dateRange:
+    type: object
+    $ref: "#/definitions/DateRange"
   fileUri:
     description: File URI
     readOnly: true
@@ -68,9 +71,6 @@ properties:
     description: Export updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
-  dateRange:
-    type: object
-    $ref: "#/definitions/DateRange"
   _links:
     type: array
     description: The links related to resource
