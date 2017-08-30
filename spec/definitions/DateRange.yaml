@@ -14,3 +14,5 @@ properties:
       - current-month
       - current-year
       - custom
+required:
+  - range

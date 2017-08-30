@@ -3,16 +3,14 @@ allOf:
   -
     $ref: "#/definitions/DateRange"
   -
-    type: "object"
+    type: object
     properties:
       duration:
-        description: Duration
         type: integer
+        description: The number of the units
+        minimum: 1
       unit:
-        description: Unit
-        type: string
-        enum:
-          - day
-          - week
-          - month
-          - year
+          $ref: "#/definitions/TimeUnit"
+    required:
+      - duration
+      - unit
