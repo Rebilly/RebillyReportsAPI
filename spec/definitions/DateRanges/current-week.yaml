@@ -1,0 +1,4 @@
+description: Current week
+allOf:
+  -
+    $ref: "#/definitions/DateRange"

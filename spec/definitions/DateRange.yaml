@@ -1,7 +1,8 @@
 type: object
-discriminator: range-type
+discriminator: range
+description: The relative date range
 properties:
-  range-type:
+  range:
     type: string
     enum:
       - all
@@ -13,4 +14,3 @@ properties:
       - current-month
       - current-year
       - custom
-    default: previous-month
