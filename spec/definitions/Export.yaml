@@ -47,6 +47,11 @@ properties:
   dateRange:
     type: object
     $ref: "#/definitions/DateRange"
+  email-notification:
+    description: List of emails to be notified when export is completed
+    type: array
+    items:
+      - $ref: "#/definitions/Email"
   fileId:
     description: File ID
     readOnly: true
