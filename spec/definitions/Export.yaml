@@ -51,7 +51,8 @@ properties:
     description: List of emails to be notified when export is completed
     type: array
     items:
-      - $ref: "#/definitions/Email"
+      type: string
+      format: email
   fileId:
     description: File ID
     readOnly: true
