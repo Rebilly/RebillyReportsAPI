@@ -44,6 +44,9 @@ properties:
         description: The partial search of the text fields.
       criteria:
         $ref: "#/definitions/Condition"
+  dateRange:
+    type: object
+    $ref: "#/definitions/DateRange"
   fileId:
     description: File ID
     readOnly: true

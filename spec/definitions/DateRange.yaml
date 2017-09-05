@@ -1,0 +1,18 @@
+type: object
+discriminator: range
+description: The relative date range
+properties:
+  range:
+    type: string
+    enum:
+      - all
+      - yesterday
+      - previous-week
+      - previous-month
+      - previous-year
+      - current-week
+      - current-month
+      - current-year
+      - custom
+required:
+  - range
