@@ -4,7 +4,7 @@ properties:
     type: array
     items:
       type: object
-      description: The fields of methods (except of total) can be absent in set.
+      description: The counts by methods for route specified.
       readOnly: true
       properties:
         route:
