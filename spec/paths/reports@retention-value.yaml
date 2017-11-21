@@ -34,7 +34,6 @@ get:
         - month
         - quarter
         - year
-        - cycle
     - name: includeRefunds
       in: query
       description: If to include refunds
