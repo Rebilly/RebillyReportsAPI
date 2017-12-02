@@ -1,0 +1,13 @@
+description: The calculation instruction of scheduled time
+type: object
+discriminator: method
+properties:
+  method:
+    description: The interval of recurring time
+    type: string
+    enum:
+      - "daily"
+      - "weekly"
+      - "monthly"
+required:
+  - method

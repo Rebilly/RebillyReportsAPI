@@ -55,35 +55,7 @@ properties:
       type: string
       format: email
   scheduleInstruction:
-    description: The calculation instruction of scheduled time
-    type: object
-    properties:
-      method:
-        description: The interval of recurring time
-        type: string
-        enum:
-          - "daily"
-          - "weekly"
-          - "monthly"
-      day:
-        description: If set to monthly, this specifies the day of the month on which to schedule
-        type: integer
-        minimum: 1
-        maximum: 31
-      weekday:
-        description: If set to weekly, this is to specify which day of the week to schedule
-        type: string
-        enum:
-          - "Sunday"
-          - "Monday"
-          - "Tuesday"
-          - "Wednesday"
-          - "Thursday"
-          - "Friday"
-          - "Saturday"
-      time:
-        description: Time of day, 24 hours in format of HH:mm:ss
-        type: string
+    $ref: "#/definitions/ExportScheduleInstruction"
   fileId:
     description: File ID
     readOnly: true

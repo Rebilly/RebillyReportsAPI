@@ -1,0 +1,8 @@
+allOf:
+  - $ref: "#/definitions/ExportScheduleInstruction"
+  - type: object
+    properties:
+      time:
+        $ref: "#/definitions/Time"
+    required:
+      - time

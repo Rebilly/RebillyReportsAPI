@@ -1,0 +1,10 @@
+allOf:
+  - $ref: "#/definitions/ExportScheduleInstruction"
+  - type: object
+    properties:
+      day:
+        $ref: "#/definitions/DayOfWeek"
+      time:
+        $ref: "#/definitions/Time"
+    required:
+      - day
