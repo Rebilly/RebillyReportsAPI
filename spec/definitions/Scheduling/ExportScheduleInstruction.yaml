@@ -1,4 +1,6 @@
-description: The calculation instruction of scheduled time
+description: |
+  The definition of the recurring schedule.
+  If omitted, then the export happens immediately and is not recurring.
 type: object
 discriminator: method
 properties:
