@@ -8,3 +8,4 @@ allOf:
         $ref: "#/definitions/Time"
     required:
       - day
+      - time
