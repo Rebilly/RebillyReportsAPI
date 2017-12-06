@@ -54,7 +54,7 @@ properties:
     items:
       type: string
       format: email
-  scheduleInstruction:
+  scheduleRecurrenceInstruction:
     $ref: "#/definitions/ExportScheduleInstruction"
   fileId:
     description: File ID
