@@ -5,7 +5,7 @@ allOf:
       day:
         description: |
           The day of the month when the event will recur.
-          Be aware if the month has less days,
+          Be aware if the month has fewer days,
           the last day of the month will be selected.
         type: integer
         minimum: 1
