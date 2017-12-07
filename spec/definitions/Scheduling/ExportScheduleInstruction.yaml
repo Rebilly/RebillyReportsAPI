@@ -5,7 +5,7 @@ type: object
 discriminator: method
 properties:
   method:
-    description: The interval of recurring time
+    description: The frequency at which the exports reoccur
     type: string
     enum:
       - "daily"
