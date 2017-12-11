@@ -13,7 +13,7 @@ properties:
     readOnly: true
     type: string
   numberOfInvoices:
-    description: Number of active invoices
+    description: Number of issued, past due, or paid invoices
     readOnly: true
     type: number
     format: int
