@@ -5,11 +5,11 @@ properties:
     readOnly: true
     type: string
   invoiced:
-    description: Total amount invoiced
+    description: "Total amount invoiced. Formatted according to the currency, example: $23.02"
     readOnly: true
     type: string
   collected:
-    description: Total amount paid
+    description: "Total amount paid. Formatted according to the currency, example: $15.85"
     readOnly: true
     type: string
   numberOfInvoices:
