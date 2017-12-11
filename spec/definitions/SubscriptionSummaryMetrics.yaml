@@ -1,0 +1,19 @@
+type: object
+properties:
+  currency:
+    description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
+    readOnly: true
+    type: string
+  invoiced:
+    description: Total amount invoiced
+    readOnly: true
+    type: string
+  collected:
+    description: Total amount paid
+    readOnly: true
+    type: string
+  numberOfInvoices:
+    description: Number of active invoices
+    readOnly: true
+    type: number
+    format: int
