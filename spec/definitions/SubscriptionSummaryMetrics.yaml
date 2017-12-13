@@ -4,15 +4,15 @@ properties:
     description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
     readOnly: true
     type: string
-  invoiced:
+  invoicedAmount:
     description: "Total amount invoiced. Formatted according to the currency, example: $23.02"
     readOnly: true
     type: string
-  collected:
+  collectedAmount:
     description: "Total amount paid. Formatted according to the currency, example: $15.85"
     readOnly: true
     type: string
-  numberOfInvoices:
+  invoiceCount:
     description: Number of issued, past due, or paid invoices
     readOnly: true
     type: number
