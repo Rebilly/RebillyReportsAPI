@@ -16,4 +16,4 @@ properties:
     description: Number of issued, past due, or paid invoices
     readOnly: true
     type: number
-    format: int
+    format: integer
