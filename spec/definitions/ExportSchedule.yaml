@@ -10,14 +10,6 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  status:
-    description: Status of export request
-    readOnly: true
-    type: string
-    enum:
-      - "pending"
-      - "processing"
-      - "completed"
   name:
     description: Export name
     type: string
@@ -59,11 +51,11 @@ properties:
   recurringInstruction:
     type: string
     description: RRule RFC 5545 formatted string used for recurring exports
-  scheduledStartDate:
+  scheduledStartTime:
     type: string
     format: date-time
     description: The date and time for when to begin recurring scheduled exports
-  nextOccurrenceDate:
+  nextOccurrenceTime:
     type: string
     format: date-time
     description: The date and time of the next scheduled Export
@@ -80,16 +72,12 @@ properties:
     description: The email of the user who created the export
     readOnly: true
     type: string
-  recordCount:
-    description: The number of records in the export
-    readOnly: true
-    type: integer
   createdTime:
-    description: Export request created time
+    description: Export schedule created time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
-    description: Export updated time
+    description: Export schedule updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:
@@ -100,4 +88,3 @@ properties:
     maxItems: 2
     items:
       - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/FileLink"

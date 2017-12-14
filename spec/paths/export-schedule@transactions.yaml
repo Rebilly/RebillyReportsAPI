@@ -13,7 +13,7 @@ post:
         $ref: "#/definitions/ExportSchedule"
   responses:
     201:
-      description: Export schedule request received
+      description: Export schedule created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
