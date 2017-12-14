@@ -3,7 +3,7 @@ required:
   - format
   - name
   - recurringInstruction
-  - scheduledStartDate
+  - scheduledStartTime
 properties:
   id:
     description: The export identifier string
