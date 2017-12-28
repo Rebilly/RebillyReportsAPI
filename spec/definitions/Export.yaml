@@ -54,9 +54,6 @@ properties:
     items:
       type: string
       format: email
-  recurringInstruction:
-    type: string
-    description: RRule RFC 5545 formatted string used for recurring exports
   fileId:
     description: File ID
     readOnly: true
