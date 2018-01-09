@@ -64,7 +64,10 @@ tags:
       Retrieve summary information about your customers, subscriptions, transactions, and more.
   - name: Exports
     description: |
-      Bulk data exports
+      Data exports.
+  - name: Export Schedules
+    description: |
+      Schedule recurring data exports.
 ################################################################################
 securityDefinitions:
   ApiKey:
