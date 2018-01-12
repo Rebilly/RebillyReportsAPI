@@ -116,6 +116,8 @@ responses:
     description: "Invalid data was sent"
     schema:
       $ref: "#/definitions/InvalidError"
+  NoContent:
+    description: "Request was accepted, but no response body is returned"
 ################################################################################
 parameters:
   resourceId:

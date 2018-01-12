@@ -28,3 +28,30 @@ get:
         $ref: "#/definitions/ExportSchedule"
     401:
       $ref: "#/responses/AccessForbidden"
+put:
+  tags:
+    - Export Schedules
+  summary: Modify an export schedule
+  description: |
+    Modify an existing export schedule
+  responses:
+    200:
+      description: Export schedule was modified
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/ExportSchedule"
+delete:
+  tags:
+    - Export Schedules
+  summary: Delete an export schedule
+  description: |
+    Delete an existing export schedule
+  responses:
+    204:
+      $ref: "#/responses/NoContent"
