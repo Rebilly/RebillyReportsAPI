@@ -70,6 +70,10 @@ properties:
     description: The number of records in the export
     readOnly: true
     type: integer
+  wasCreatedFromSchedule:
+    description: Indicates whether or not this export was created via scheduled export request
+    readOnly: true
+    type: boolean
   createdTime:
     description: Export request created time
     allOf:
