@@ -3,12 +3,10 @@ description: Export details to be processed during recurring scheduling
 required:
   - name
   - format
+  - resource
 properties:
   name:
     description: Export name
-    type: string
-  resource:
-    description: Export resource
     type: string
   createdById:
     description: External ID of the user who created the export
@@ -25,7 +23,6 @@ properties:
   resource:
     description: 'The type of resource being exported (eg., transaction).'
     type: string
-    readOnly: true
   format:
     description: Export result format
     type: string
