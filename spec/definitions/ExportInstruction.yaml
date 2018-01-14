@@ -7,6 +7,9 @@ properties:
   name:
     description: Export name
     type: string
+  resource:
+    description: Export resource
+    type: string
   createdById:
     description: External ID of the user who created the export
     type: string
