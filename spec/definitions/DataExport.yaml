@@ -1,0 +1,51 @@
+type: object
+required:
+  - dataExportInstruction
+properties:
+  id:
+    description: The export identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  dataExportInstruction:
+    allOf:
+      - $ref: "#/definitions/ExportInstruction"
+  fileId:
+    description: File ID
+    readOnly: true
+    type: string
+  status:
+    description: Status of export request
+    readOnly: true
+    type: string
+    enum:
+      - pending
+      - processing
+      - completed
+  recordCount:
+    description: The number of records in the export
+    readOnly: true
+    type: integer
+  wasCreatedFromSchedule:
+    description: >-
+      Indicates whether or not this export was created via scheduled export
+      request
+    readOnly: true
+    type: boolean
+  createdTime:
+    description: Export schedule created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Export schedule updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 2
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/CreatedByLink"

@@ -1,8 +1,9 @@
 type: object
-description: Export details to be processed during recurring scheduling
+description: Defines the parameters of the requested data export
 required:
   - name
   - format
+  - resource
 properties:
   name:
     description: Export name
@@ -20,9 +21,10 @@ properties:
     type: string
     readOnly: true
   resource:
-    description: 'The type of resource being exported (eg., transaction).'
+    description: 'The type of resource being exported (eg., transactions).'
     type: string
-    readOnly: true
+    enum:
+      - transactions
   format:
     description: Export result format
     type: string
