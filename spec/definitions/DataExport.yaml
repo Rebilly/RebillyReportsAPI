@@ -10,6 +10,28 @@ properties:
   dataExportInstruction:
     allOf:
       - $ref: "#/definitions/ExportInstruction"
+  fileId:
+    description: File ID
+    readOnly: true
+    type: string
+  status:
+    description: Status of export request
+    readOnly: true
+    type: string
+    enum:
+      - pending
+      - processing
+      - completed
+  recordCount:
+    description: The number of records in the export
+    readOnly: true
+    type: integer
+  wasCreatedFromSchedule:
+    description: >-
+      Indicates whether or not this export was created via scheduled export
+      request
+    readOnly: true
+    type: boolean
   createdTime:
     description: Export schedule created time
     allOf:
