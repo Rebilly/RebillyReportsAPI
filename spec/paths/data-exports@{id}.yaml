@@ -3,14 +3,14 @@ parameters:
 get:
   tags:
     - Data Exports
-  summary: Retrieve an export request
+  summary: Retrieve a data export request
   description: |
-    Retrieve an export request
+    Retrieve a data export request
   produces:
     - application/json
   responses:
     200:
-      description: Export request
+      description: Data Export request
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
