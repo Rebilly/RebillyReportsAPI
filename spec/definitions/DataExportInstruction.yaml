@@ -9,7 +9,7 @@ properties:
     description: Export name
     type: string
   createdById:
-    description: External ID of the user who created the export
+    description: ID of the user who created the export
     type: string
     readOnly: true
   createdByName:
@@ -17,7 +17,7 @@ properties:
     type: string
     readOnly: true
   createdByEmail:
-    description: E-Mail of the user who created the export
+    description: Email of the user who created the export
     type: string
     readOnly: true
   resource:
