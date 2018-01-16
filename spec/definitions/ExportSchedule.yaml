@@ -11,7 +11,7 @@ properties:
       - $ref: "#/definitions/ResourceId"
   dataExportInstruction:
     allOf:
-      - $ref: "#/definitions/ExportInstruction"
+      - $ref: "#/definitions/DataExportInstruction"
   recurringInstruction:
     type: string
     description: RRule RFC 5545 formatted string used for recurring exports

@@ -9,7 +9,7 @@ properties:
       - $ref: "#/definitions/ResourceId"
   dataExportInstruction:
     allOf:
-      - $ref: "#/definitions/ExportInstruction"
+      - $ref: "#/definitions/DataExportInstruction"
   fileId:
     description: File ID
     readOnly: true
