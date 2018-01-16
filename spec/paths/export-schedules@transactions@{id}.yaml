@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Export Schedules
+    - Data Export Schedules
   summary: Retrieve an export schedule
   description: |
     Retrieve an export schedule
@@ -30,7 +30,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 put:
   tags:
-    - Export Schedules
+    - Data Export Schedules
   summary: Modify an export schedule
   description: |
     Modify an existing export schedule
@@ -59,7 +59,7 @@ put:
         $ref: "#/definitions/ExportSchedule"
 delete:
   tags:
-    - Export Schedules
+    - Data Export Schedules
   summary: Delete an export schedule
   description: |
     Delete an existing export schedule
