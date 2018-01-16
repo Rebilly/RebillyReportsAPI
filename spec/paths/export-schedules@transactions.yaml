@@ -1,6 +1,6 @@
 post:
   tags:
-    - Export Schedules
+    - Data Export Schedules
   summary: Schedule recurring exports
   description: |
     Schedule recurring exports
@@ -27,7 +27,7 @@ post:
       $ref: "#/responses/AccessForbidden"
 get:
   tags:
-    - Export Schedules
+    - Data Export Schedules
   summary: Retrieve a list of export schedules
   description: |
     Retrieve a list of export schedules

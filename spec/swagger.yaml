@@ -62,10 +62,10 @@ tags:
   - name: Reports
     description: |
       Retrieve summary information about your customers, subscriptions, transactions, and more.
-  - name: Exports
+  - name: Data Exports
     description: |
       Data exports.
-  - name: Export Schedules
+  - name: Data Export Schedules
     description: |
       Schedule recurring data exports.
 ################################################################################
