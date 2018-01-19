@@ -9,7 +9,7 @@ properties:
       - $ref: "#/definitions/ResourceId"
   dataExportInstruction:
     allOf:
-      - $ref: "#/definitions/ExportInstruction"
+      - $ref: "#/definitions/DataExportInstruction"
   fileId:
     description: File ID
     readOnly: true
@@ -48,4 +48,4 @@ properties:
     maxItems: 2
     items:
       - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/CreatedByLink"
+      - $ref: "#/definitions/FileLink"
