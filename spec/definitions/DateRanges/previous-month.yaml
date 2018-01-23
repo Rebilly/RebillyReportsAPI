@@ -1,4 +1,0 @@
-description: Previous Month
-allOf:
-  -
-    $ref: "#/definitions/DateRange"

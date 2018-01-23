@@ -1,4 +1,0 @@
-description: All
-allOf:
-  -
-    $ref: "#/definitions/DateRange"
