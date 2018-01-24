@@ -30,6 +30,11 @@ properties:
     description: The number of records in the export
     readOnly: true
     type: integer
+  scheduledTime:
+    type: string
+    readOnly: true
+    format: date-time
+    description: The date and time of the next scheduled Export
   createdTime:
     description: Export schedule created time
     allOf:
