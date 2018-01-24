@@ -53,7 +53,7 @@ properties:
   recurringInstruction:
       type: string
       description: RRule RFC 5545 formatted string used for recurring exports
-    scheduledStartTime:
+  scheduledStartTime:
       type: string
       format: date-time
       description: The date and time for when to begin recurring scheduled exports
