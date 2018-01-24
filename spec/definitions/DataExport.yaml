@@ -30,11 +30,6 @@ properties:
     description: The number of records in the export
     readOnly: true
     type: integer
-  scheduledTime:
-    type: string
-    readOnly: true
-    format: date-time
-    description: The date and time this data export is scheduled to generate a file
   createdTime:
     description: The time the data export was requested
     allOf:
