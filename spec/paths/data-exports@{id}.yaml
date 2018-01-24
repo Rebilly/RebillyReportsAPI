@@ -28,6 +28,8 @@ get:
         $ref: "#/definitions/DataExport"
     401:
       $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
 put:
   tags:
     - Data Exports
@@ -61,10 +63,6 @@ put:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
-    422:
-      description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
 delete:
   tags:
     - Data Exports
