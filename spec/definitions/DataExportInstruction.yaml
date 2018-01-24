@@ -8,18 +8,6 @@ properties:
   name:
     description: Export name
     type: string
-  createdById:
-    description: ID of the user who created the export
-    type: string
-    readOnly: true
-  createdByName:
-    description: Name of the user who created the export
-    type: string
-    readOnly: true
-  createdByEmail:
-    description: Email of the user who created the export
-    type: string
-    readOnly: true
   resource:
     description: 'The type of resource being exported (eg., transactions).'
     type: string
@@ -62,3 +50,10 @@ properties:
     items:
       type: string
       format: email
+  recurringInstruction:
+      type: string
+      description: RRule RFC 5545 formatted string used for recurring exports
+    scheduledStartTime:
+      type: string
+      format: date-time
+      description: The date and time for when to begin recurring scheduled exports
