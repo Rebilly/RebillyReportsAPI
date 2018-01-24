@@ -47,4 +47,4 @@ properties:
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/UserLink"
-      - $ref: "#/definitions/DownloadLink"
+      - $ref: "#/definitions/SignedDownloadLink"
