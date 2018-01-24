@@ -36,6 +36,13 @@ put:
   summary: Modify a data export
   description: |
     A data export may be changed as long as it is still pending
+  parameters:
+    - name: body
+      in: body
+      description: Data Export Request
+      required: true
+      schema:
+        $ref: "#/definitions/DataExport"
   responses:
     200:
       description: Data Export was modified
@@ -61,8 +68,10 @@ put:
         $ref: "#/definitions/DataExport"
     401:
       $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
 delete:
   tags:
     - Data Exports
@@ -72,3 +81,7 @@ delete:
   responses:
     204:
       $ref: "#/responses/NoContent"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
