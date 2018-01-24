@@ -15,7 +15,7 @@ properties:
     readOnly: true
     type: string
   userId:
-    description: User ID
+    description: The ID of the User who requested the data export
     readOnly: true
     type: string
   status:
@@ -34,13 +34,13 @@ properties:
     type: string
     readOnly: true
     format: date-time
-    description: The date and time of the next scheduled Export
+    description: The date and time this data export is scheduled to generate a file
   createdTime:
-    description: Export schedule created time
+    description: The time the data export was requested
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
-    description: Export schedule updated time
+    description: Data export updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:

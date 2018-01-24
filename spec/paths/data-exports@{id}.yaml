@@ -35,7 +35,7 @@ put:
     - Data Exports
   summary: Modify a data export
   description: |
-    Modify an existing data export
+    A data export may be changed as long as it is still pending
   responses:
     200:
       description: Data Export was modified
