@@ -62,3 +62,10 @@ properties:
     items:
       type: string
       format: email
+  recurringInstruction:
+    type: string
+    description: RRule RFC 5545 formatted string used for recurring exports
+  recurringStart:
+    type: string
+    format: date-time
+    description: The date and time for when to begin recurring scheduled exports
