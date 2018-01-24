@@ -1,4 +1,0 @@
-description: Yesterday
-allOf:
-  -
-    $ref: "#/definitions/DateRange"
