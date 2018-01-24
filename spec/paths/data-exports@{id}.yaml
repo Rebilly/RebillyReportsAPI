@@ -28,3 +28,41 @@ get:
         $ref: "#/definitions/DataExport"
     401:
       $ref: "#/responses/AccessForbidden"
+put:
+  tags:
+    - Data Exports
+  summary: Modify a data export
+  description: |
+    Modify an existing data export
+  responses:
+    200:
+      description: Data Export was modified
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/DataExport"
+    201:
+      description: Data Export was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/DataExport"
+delete:
+  tags:
+    - Data Exports
+  summary: Delete a data export
+  description: |
+    Delete an existing data export
+  responses:
+    204:
+      $ref: "#/responses/NoContent"
