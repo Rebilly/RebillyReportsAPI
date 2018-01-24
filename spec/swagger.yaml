@@ -65,9 +65,6 @@ tags:
   - name: Data Exports
     description: |
       Data exports.
-  - name: Data Export Schedules
-    description: |
-      Schedule recurring data exports.
 ################################################################################
 securityDefinitions:
   ApiKey:
