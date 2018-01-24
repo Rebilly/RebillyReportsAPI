@@ -32,6 +32,11 @@ properties:
       request
     readOnly: true
     type: boolean
+  scheduledTime:
+    type: string
+    readOnly: true
+    format: date-time
+    description: The date and time this data export is scheduled to generate a file
   createdTime:
     description: Export schedule created time
     allOf:
