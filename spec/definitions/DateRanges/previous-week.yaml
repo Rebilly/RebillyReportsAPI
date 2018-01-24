@@ -1,4 +1,0 @@
-description: Previous Week
-allOf:
-  -
-    $ref: "#/definitions/DateRange"

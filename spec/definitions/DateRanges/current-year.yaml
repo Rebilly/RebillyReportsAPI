@@ -1,4 +1,0 @@
-description: Current year
-allOf:
-  -
-    $ref: "#/definitions/DateRange"
