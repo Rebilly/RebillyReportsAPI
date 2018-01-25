@@ -1,30 +1,21 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a disputes report
-  description: |
-    Retrieve a disputes report
+  summary: Retrieve a report of payments successful retries throughput
+  description: Retrieve a report of payments successful retries throughput
   parameters:
-    - name: aggregationField
+    - name: periodStart
       in: query
-      description: Report will be aggregated by this field
+      description: Report start day
       required: true
       type: string
-      enum:
-        - "website"
-        - "gatewayAcquirer"
-        - "currency"
-        - "bin"
-        - "country"
-        - "rebillNumber"
-        - "retryNumber"
-        - "gatewayAccount"
-        - "transactionAmount"
-    - name: periodMonth
+      format: date-time
+    - name: periodEnd
       in: query
-      description: Report month in format YYYY-MM
+      description: Report end day
       required: true
       type: string
+      format: date-time
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
@@ -45,6 +36,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/ReportDisputes"
+        $ref: "#/definitions/ReportPaymentsSuccessfulRetries"
     401:
       $ref: "#/responses/AccessForbidden"

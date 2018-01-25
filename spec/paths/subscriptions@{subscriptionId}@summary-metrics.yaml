@@ -1,0 +1,26 @@
+get:
+  tags:
+    - Subscriptions
+  summary: Retrieve subscription summary metrics
+  description: |
+    Retrieve subscription summary metrics
+  parameters:
+    - name: subscriptionId
+      in: path
+      type: string
+      required: true
+      description: Subscription's ID
+  responses:
+    200:
+      description: Metrics were retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/SubscriptionSummaryMetrics"
+    401:
+      $ref: "#/responses/AccessForbidden"

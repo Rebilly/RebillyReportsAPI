@@ -1,0 +1,87 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Data Exports
+  summary: Retrieve a data export request
+  description: |
+    Retrieve a data export request
+  produces:
+    - application/json
+  responses:
+    200:
+      description: Data Export request
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
+      schema:
+        $ref: "#/definitions/DataExport"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Data Exports
+  summary: Modify a data export
+  description: |
+    A data export may be changed as long as it is still pending
+  parameters:
+    - name: body
+      in: body
+      description: Data Export Request
+      required: true
+      schema:
+        $ref: "#/definitions/DataExport"
+  responses:
+    200:
+      description: Data Export was modified
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/DataExport"
+    201:
+      description: Data Export was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/DataExport"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
+delete:
+  tags:
+    - Data Exports
+  summary: Delete a data export
+  description: |
+    Delete an existing data export
+  responses:
+    204:
+      $ref: "#/responses/NoContent"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

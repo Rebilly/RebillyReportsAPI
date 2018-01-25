@@ -1,29 +1,22 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a cumulative subscriptions report
-  description: Retrieve a cumulative subscriptions report
+  summary: Retrieve a payment retry report
+  description: |
+    Retrieve a payment retry report
   parameters:
-    - name: aggregationField
-      in: query
-      description: Report aggregation field
-      required: true
-      type: string
-      enum:
-        - day
-        - month
     - name: periodStart
       in: query
       description: Report start date
-      type: string
       required: true
+      type: string
+      format: date-time
     - name: periodEnd
       in: query
       description: Report end date
-      type: string
       required: true
-    - $ref: "#/parameters/collectionLimit"
-    - $ref: "#/parameters/collectionOffset"
+      type: string
+      format: date-time
     - $ref: "#/parameters/collectionFilter"
     - $ref: "#/parameters/collectionCriteria"
   responses:
@@ -37,6 +30,6 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/CumulativeSubscriptions"
+        $ref: "#/definitions/ReportPaymentRetry"
     401:
       $ref: "#/responses/AccessForbidden"

@@ -62,6 +62,9 @@ tags:
   - name: Reports
     description: |
       Retrieve summary information about your customers, subscriptions, transactions, and more.
+  - name: Data Exports
+    description: |
+      Data exports.
 ################################################################################
 securityDefinitions:
   ApiKey:
@@ -110,6 +113,8 @@ responses:
     description: "Invalid data was sent"
     schema:
       $ref: "#/definitions/InvalidError"
+  NoContent:
+    description: "Request was accepted, but no response body is returned"
 ################################################################################
 parameters:
   resourceId:
@@ -144,6 +149,11 @@ parameters:
     in: query
     type: string
     description: The partial search of the text fields.
+  collectionCriteria:
+    name: criteria
+    in: query
+    type: string
+    description: The json criteria for collection
   collectionSort:
     name: sort
     in: query

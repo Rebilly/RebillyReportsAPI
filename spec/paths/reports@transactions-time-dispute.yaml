@@ -1,37 +1,25 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a time series transactions report
-  description: Retrieve a transactions report aggregated by time periods
+  summary: Retrieve a dispute delays in days report
+  description: |
+    Retrieve a dispute delays in days report, how much time between a transaction and a dispute.
   parameters:
-    - name: type
+    - name: aggregationField
       in: query
-      description: Report aggregation type
+      description: Report will be aggregated by this field
       required: true
       type: string
       enum:
-        - count
-        - amount
-        - approval-rate
-        - incomplete-rate
-    - name: subaggregate
-      in: query
-      description: Report subaggregate
-      required: true
-      type: string
-      enum:
-        - website
-        - gateway-account
-        - currency
-        - plan
-        - leads.source
-        - leads.medium
-        - leads.campaign
-        - leads.content
-        - leads.term
-        - leads.affiliate
-        - leads.subaffiliate
-        - leads.sales-agent
+        - "website"
+        - "processor"
+        - "currency"
+        - "bin"
+        - "country"
+        - "rebillNumber"
+        - "retryNumber"
+        - "gatewayAccount"
+        - "transactionAmount"
     - name: periodStart
       in: query
       description: Report start date
@@ -42,6 +30,10 @@ get:
       description: Report end date
       type: string
       required: true
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionCriteria"
   responses:
     200:
       description: Report was retrieved successfully
@@ -59,6 +51,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/TimeSeriesTransaction"
+        $ref: "#/definitions/ReportDisputeDelays"
     401:
       $ref: "#/responses/AccessForbidden"

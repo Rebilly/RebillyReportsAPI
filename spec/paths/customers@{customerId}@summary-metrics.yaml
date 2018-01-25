@@ -1,0 +1,26 @@
+get:
+  tags:
+    - Customers
+  summary: Retrieve customer lifetime summary metrics
+  description: |
+    Retrieve customer lifetime summary metrics
+  parameters:
+    - name: customerId
+      in: path
+      type: string
+      required: true
+      description: Customer's ID
+  responses:
+    200:
+      description: Metrics were retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/CustomerInformation"
+    401:
+      $ref: "#/responses/AccessForbidden"

@@ -1,37 +1,25 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a time series transactions report
-  description: Retrieve a transactions report aggregated by time periods
+  summary: Retrieve a rules matched summary report
+  description: |
+    Retrieve a rules matched summary report by events triggered.
   parameters:
-    - name: type
-      in: query
-      description: Report aggregation type
-      required: true
+    - name: eventType
+      in: path
       type: string
-      enum:
-        - count
-        - amount
-        - approval-rate
-        - incomplete-rate
-    - name: subaggregate
-      in: query
-      description: Report subaggregate
       required: true
-      type: string
+      description: The system event type
       enum:
-        - website
-        - gateway-account
-        - currency
-        - plan
-        - leads.source
-        - leads.medium
-        - leads.campaign
-        - leads.content
-        - leads.term
-        - leads.affiliate
-        - leads.subaffiliate
-        - leads.sales-agent
+        - dispute-created
+        - gateway-account-requested
+        - transaction-processed
+        - subscription-canceled
+        - subscription-renewed
+        - payment-card-expired
+        - payment-declined
+        - transaction-process-requested
+        - risk-score-changed
     - name: periodStart
       in: query
       description: Report start date
@@ -42,6 +30,8 @@ get:
       description: Report end date
       type: string
       required: true
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
   responses:
     200:
       description: Report was retrieved successfully
@@ -59,6 +49,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/TimeSeriesTransaction"
+        $ref: "#/definitions/ReportRulesMatchedSummary"
     401:
       $ref: "#/responses/AccessForbidden"
