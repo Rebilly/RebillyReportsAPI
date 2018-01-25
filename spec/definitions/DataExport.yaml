@@ -23,7 +23,7 @@ properties:
       - processing
       - completed
   recordCount:
-    description: The number of records in the export
+    description: The number of records in the export (excluding the header row)
     readOnly: true
     type: integer
   createdTime:
