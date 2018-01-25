@@ -10,10 +10,6 @@ properties:
   dataExportInstruction:
     allOf:
       - $ref: "#/definitions/DataExportInstruction"
-  fileId:
-    description: File ID
-    readOnly: true
-    type: string
   userId:
     description: The ID of the User who requested the data export
     readOnly: true
