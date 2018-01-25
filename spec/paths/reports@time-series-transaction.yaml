@@ -23,6 +23,7 @@ get:
         - website
         - gateway-account
         - currency
+        - plan
         - leads.source
         - leads.medium
         - leads.campaign
