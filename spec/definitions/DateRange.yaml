@@ -1,5 +1,5 @@
 type: object
-description: The date range
+description: The date range (can be in relative formats).  If omitted, all time will be included.
 properties:
   start:
     type: string
