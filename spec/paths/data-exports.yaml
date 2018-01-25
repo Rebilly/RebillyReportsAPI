@@ -25,6 +25,10 @@ post:
         $ref: "#/definitions/DataExport"
     401:
       $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
 get:
   tags:
     - Data Exports
@@ -53,3 +57,5 @@ get:
           $ref: "#/definitions/DataExport"
     401:
       $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
