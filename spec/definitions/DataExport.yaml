@@ -68,7 +68,7 @@ properties:
       type: string
       format: email
   fields:
-    description: List of fields to include in the export.  See supporting documentation for more info.
+    description: List of fields to include in the export.  See supporting documentation for more info.  If omitted, default fields will be included.
     type: array
     items:
       type: string
