@@ -50,3 +50,8 @@ properties:
     items:
       type: string
       format: email
+  fields:
+    description: List of fields to be exported
+    type: array
+    items:
+      type: string
