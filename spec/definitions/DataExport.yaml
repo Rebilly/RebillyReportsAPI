@@ -47,13 +47,45 @@ properties:
       criteria:
         $ref: '#/definitions/Condition'
   dateRange:
-    $ref: '#/definitions/DateRange'
+    type: object
+    description: The date range (can be in relative formats).  If omitted, all time will be included.
+    properties:
+      start:
+        type: string
+        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
+        example: 'yesterday'
+      end:
+        type: string
+        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
+        example: 'today'
+    required:
+      - start
+      - end
   emailNotification:
     description: List of emails to be notified when export is completed
     type: array
     items:
       type: string
       format: email
+  fields:
+    description: List of fields to include in the export.  See supporting documentation for more info.
+    type: array
+    items:
+      type: string
+  recurring:
+    description: >-
+      Exports can reoccur according to your own schedule
+    type: object
+    required:
+      - instruction
+    properties:
+      instruction:
+        type: string
+        description: RRule RFC 5545 formatted string used for recurring exports
+      start:
+        type: string
+        format: date-time
+        description: The date and time when the first recurring scheduled export will occur. Defaults to now.
   userId:
     description: The ID of the User who requested the data export
     readOnly: true
@@ -62,6 +94,10 @@ properties:
     description: The number of records in the export (excluding the header row)
     readOnly: true
     type: integer
+  scheduledTime:
+    description: The date and time this data export is scheduled to generate a file
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: The time the data export was requested
     allOf:
