@@ -8,18 +8,6 @@ properties:
   name:
     description: Export name
     type: string
-  createdById:
-    description: ID of the user who created the export
-    type: string
-    readOnly: true
-  createdByName:
-    description: Name of the user who created the export
-    type: string
-    readOnly: true
-  createdByEmail:
-    description: Email of the user who created the export
-    type: string
-    readOnly: true
   resource:
     description: 'The type of resource being exported (eg., transactions).'
     type: string
