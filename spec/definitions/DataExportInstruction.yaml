@@ -62,7 +62,7 @@ properties:
     items:
       type: string
       format: email
-  exportFields:
+  fields:
     description: List of fields to be exported
     type: array
     items:
