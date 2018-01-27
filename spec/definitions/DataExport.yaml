@@ -112,6 +112,7 @@ properties:
     type: string
     enum:
       - pending
+      - queued
       - processing
       - completed
   _links:
@@ -121,7 +122,7 @@ properties:
     minItems: 1
     maxItems: 4
     items:
-      - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/UserLink"
-      - $ref: "#/definitions/FileDownloadLink"
-      - $ref: "#/definitions/SignedLinkLink"
+      - $ref: "#/definitions/LinkSelf"
+      - $ref: "#/definitions/LinkUser"
+      - $ref: "#/definitions/LinkFileDownload"
+      - $ref: "#/definitions/LinkSignedLink"
