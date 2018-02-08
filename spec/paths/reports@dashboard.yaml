@@ -1,0 +1,38 @@
+post:
+  tags:
+    - Reports
+  summary: Retrieve dashboard data
+  description: Retrieve dashboard data
+  parameters:
+    - name: periodStart
+      in: query
+      description: Report start day
+      required: true
+      type: string
+      format: date-time
+    - name: periodEnd
+      in: query
+      description: Report end day
+      required: true
+      type: string
+      format: date-time
+    - name: body
+      in: body
+      description: Dashboard request
+      required: true
+      schema:
+        $ref: "#/definitions/DashboardRequest"
+  responses:
+    200:
+      description: Report was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/DashboardResponse"
+    401:
+      $ref: "#/responses/AccessForbidden"

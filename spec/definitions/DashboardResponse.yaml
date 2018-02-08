@@ -1,0 +1,55 @@
+type: object
+properties:
+  metrics:
+    type: object
+    properties:
+      metricName:
+        type: object
+        description: The metric name which was specified in the request with its data.
+        properties:
+          currentValue:
+            type: number
+            format: double
+            description: Metric value for the given date range.
+          previousValue:
+            type: number
+            format: double
+            description: Metric value for the previous date range (relatively to the given date range).
+          chart:
+            type: array
+            items:
+              type: object
+              description: Chart data
+              readOnly: true
+              properties:
+                date:
+                  type: string
+                  description: Entry date-time
+                value:
+                  type: number
+                  description: Entry value
+          segments:
+            type: object
+            description: Additional filtered segments for each metric
+            properties:
+              currentValue:
+                type: number
+                format: double
+                description: Metric value for the given date range.
+              previousValue:
+                type: number
+                format: double
+                description: Metric value for the previous date range (relatively to the given date range).
+              chart:
+                type: array
+                items:
+                  type: object
+                  description: Chart data
+                  readOnly: true
+                  properties:
+                    date:
+                      type: string
+                      description: Entry date-time
+                    value:
+                      type: number
+                      description: Entry value
