@@ -1,4 +1,4 @@
-post:
+get:
   tags:
     - Reports
   summary: Retrieve dashboard data
@@ -16,12 +16,13 @@ post:
       required: true
       type: string
       format: date-time
-    - name: body
-      in: body
-      description: Dashboard request
+    - name: settings
+      in: query
+      description: Dashboard report settings as a JSON string
       required: true
-      schema:
-        $ref: "#/definitions/DashboardRequest"
+      type: string
+#      schema:
+#        $ref: "#/definitions/DashboardRequest"
   responses:
     200:
       description: Report was retrieved successfully
