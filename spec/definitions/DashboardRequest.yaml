@@ -1,27 +1,19 @@
 type: object
 properties:
-  metrics:
+  segments:
     type: object
+    description: Filtered segments for each metric
     properties:
-      metricName:
+      segmentName:
         type: object
-        description: Custom metric name which will be used in the response containing the appropriate data.
+        description: Custom segment name to be used in the response with segment settings
         properties:
-          type:
-            type: string
+          metric:
             description: Type of data and grid of the metric.
             enum:
               - approvedThroughput
               - salesAllCount
               - salesValue
               - refundsValue
-          segments:
-            type: object
-            description: Additional filtered segments for each metric
-            properties:
-              segmentName:
-                type: object
-                description: Custom segment name to be used in the response with segment settings
-                properties:
-                  criteria:
-                    $ref: '#/definitions/Condition'
+          criteria:
+            $ref: '#/definitions/Condition'
