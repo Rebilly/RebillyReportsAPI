@@ -21,6 +21,7 @@ get:
       description: Dashboard report settings as a JSON string
       required: true
       type: string
+    - $ref: "#/parameters/reportTimezone"
 #      schema:
 #        $ref: "#/definitions/DashboardRequest"
   responses:
