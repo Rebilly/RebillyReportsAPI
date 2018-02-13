@@ -1,20 +1,28 @@
-type: object
-properties:
-  segments:
-    type: object
-    properties:
-      segmentName:
+type: array
+items:
+  type: object
+  properties:
+    metric:
+      type: string
+      description: Metric type
+      enum:
+        - approvedThroughput
+        - salesAllCount
+        - salesValue
+        - refundsValue
+    segments:
+      type: array
+      items:
         type: object
-        description: The segment name which was specified in the request with its data.
         properties:
-          currentValue:
+          value:
             type: number
             format: double
-            description: Metric value for the given date range.
+            description: Segment value for the given date range.
           previousValue:
             type: number
             format: double
-            description: Metric value for the previous date range (relatively to the given date range).
+            description: Segment value for the previous date range (relatively to the given date range).
           chart:
             type: array
             items:

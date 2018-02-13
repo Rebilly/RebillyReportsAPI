@@ -16,14 +16,20 @@ get:
       required: true
       type: string
       format: date-time
-    - name: settings
+    - name: metrics
       in: query
-      description: Dashboard report settings as a JSON string
+      description: Comma-separated list of metrics
       required: true
       type: string
-    - $ref: "#/parameters/reportTimezone"
+      format: date-time
+    - name: segments
+      in: query
+      description: Dashboard report segments as a JSON array
+      required: true
+      type: string
 #      schema:
-#        $ref: "#/definitions/DashboardRequest"
+#        $ref: "#/definitions/DashboardSegments"
+    - $ref: "#/parameters/reportTimezone"
   responses:
     200:
       description: Report was retrieved successfully
