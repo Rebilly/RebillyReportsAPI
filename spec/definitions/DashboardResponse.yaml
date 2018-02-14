@@ -10,20 +10,37 @@ items:
         - salesAllCount
         - salesValue
         - refundsValue
+    name:
+      type: string
+      description: Metric name to display
     segments:
       type: array
       items:
         type: object
         properties:
+          name:
+            type: string
+            description: Segment name
           value:
             type: number
             format: double
-            description: Segment value for the given date range.
-          previousValue:
+            description: Segment value for the given date range
+          humanValue:
+            type: string
+            description: Human readable segment value (formatted with a currency sign)
+          changeRatio:
             type: number
             format: double
-            description: Segment value for the previous date range (relatively to the given date range).
-          chart:
+            description: |
+              Ratio of current value per previous value (relative to the given date range), the values range is [-1, 1]
+          humanChangeRatio:
+            type: string
+            description: Human readable change ratio (formatted percentage with a "%" sign)
+          increaseIsGood:
+            type: boolean
+            description: |
+              True when the higher value means a better performance thus positive for a merchant, false otherwise
+          timeseries:
             type: array
             items:
               type: object
