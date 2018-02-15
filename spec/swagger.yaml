@@ -136,6 +136,13 @@ parameters:
     description: The collection items offset
     type: integer
     minimum: 0
+  reportTimezone:
+    name: tz
+    in: query
+    description: Report's timezone offset in minutes
+    type: integer
+    minimum: -720
+    maximum: 720
   collectionFilter:
     name: filter
     in: query

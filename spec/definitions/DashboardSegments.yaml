@@ -1,0 +1,10 @@
+type: array
+items:
+  type: object
+  description: Filtered segment for each metric
+  properties:
+    name:
+      type: string
+      description: Name of the segment
+    criteria:
+      $ref: '#/definitions/Condition'
