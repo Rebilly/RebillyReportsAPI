@@ -19,13 +19,11 @@ get:
     - name: metrics
       in: query
       description: Comma-separated list of metrics
-      required: true
       type: string
       format: date-time
     - name: segments
       in: query
       description: Dashboard report segments as a JSON array
-      required: true
       type: string
 #      schema:
 #        $ref: "#/definitions/DashboardSegments"
