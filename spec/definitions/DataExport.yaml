@@ -17,6 +17,7 @@ properties:
     type: string
     enum:
       - transactions
+      - customers
   format:
     description: Export result format
     type: string
