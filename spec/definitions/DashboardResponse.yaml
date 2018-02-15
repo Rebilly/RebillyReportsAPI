@@ -6,11 +6,11 @@ items:
       type: string
       description: Metric type
       enum:
-        - approvedThroughput
-        - salesAllCount
+        - approvalRate
+        - salesCount
         - salesValue
         - refundsValue
-    name:
+    humanName:
       type: string
       description: Metric name to display
     segments:
