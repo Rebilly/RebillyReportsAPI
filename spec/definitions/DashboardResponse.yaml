@@ -13,6 +13,9 @@ items:
     humanName:
       type: string
       description: Metric name to display
+    increaseIsGood:
+      type: boolean
+      description: True when the higher value means a better performance thus positive for a merchant, false otherwise
     segments:
       type: array
       items:
@@ -25,21 +28,20 @@ items:
             type: number
             format: double
             description: Segment value for the given date range
+          previousValue:
+            type: number
+            format: double
+            description: Segment value for the previous date range (relative to the given date range)
           humanValue:
             type: string
             description: Human readable segment value (formatted with a currency sign)
           changeRatio:
             type: number
             format: double
-            description: |
-              Ratio of current value per previous value (relative to the given date range), the values range is [-1, 1]
+            description: Ratio of current value per previous value null is infinity
           humanChangeRatio:
             type: string
-            description: Human readable change ratio (formatted percentage with a "%" sign)
-          increaseIsGood:
-            type: boolean
-            description: |
-              True when the higher value means a better performance thus positive for a merchant, false otherwise
+            description: Human readable change ratio (formatted percentage with a "%" sign), null is infinity
           timeseries:
             type: array
             items:
