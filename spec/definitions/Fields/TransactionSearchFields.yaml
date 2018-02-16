@@ -1,0 +1,67 @@
+type: object
+properties:
+  customerId:
+    type: string
+  websiteId:
+    type: string
+  gatewayAccountId:
+    type: string
+  paymentCardId:
+    type: string
+  currency:
+    type: string
+  method:
+    type: string
+  gatewayName:
+    type: string
+  acquirerName:
+    type: string
+  hasDcc:
+    type: boolean
+  isRetry:
+    type: boolean
+  bin:
+    type: string
+  amount:
+    type: number
+    format: float
+  rebillNumber:
+    type: integer
+  retryNumber:
+    type: integer
+  riskScore:
+    type: integer
+  has3ds:
+    type: boolean
+  country:
+    type: string
+  type:
+    type: string
+  result:
+    type: string
+  cardLabel:
+    type: string
+  planId:
+    type: string
+  leadSource.source:
+    type: string
+  leadSource.medium:
+    type: string
+  leadSource.campaign:
+    type: string
+  leadSource.content:
+    type: string
+  leadSource.term:
+    type: string
+  leadSource.affiliate:
+    type: string
+  leadSource.subAffiliate:
+    type: string
+  leadSource.salesAgent:
+    type: string
+  customer.customFields:
+    type: string
+    format: custom-fields
+  paymentCard.customFields:
+    type: string
+    format: custom-fields

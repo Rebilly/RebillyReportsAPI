@@ -5,6 +5,8 @@ get:
   description: |
     The retention value report shows the count of new customers
     per aggregation bucket and the corresponding per customer value over time.
+  x-searchable:
+    $ref: "#/definitions/TransactionSearchFields"
   parameters:
     - name: aggregationField
       in: query

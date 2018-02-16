@@ -3,6 +3,8 @@ get:
     - Reports
   summary: Retrieve a transactions report
   description: Retrieve a transactions report
+  x-searchable:
+    $ref: "#/definitions/TransactionSearchFields"
   parameters:
     - name: periodStart
       in: query

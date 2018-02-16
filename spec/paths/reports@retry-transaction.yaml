@@ -4,6 +4,8 @@ get:
   summary: Retrieve a payment retry report
   description: |
     Retrieve a payment retry report
+  x-searchable:
+    $ref: "#/definitions/TransactionSearchFields"
   parameters:
     - name: periodStart
       in: query
