@@ -18,6 +18,7 @@ properties:
     enum:
       - transactions
       - customers
+      - subscriptions
   format:
     description: Export result format
     type: string
@@ -59,6 +60,10 @@ properties:
         type: string
         description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
         example: 'today'
+      field:
+        type: string
+        description: The field to apply date range to. Defaults to /processedTime for Transactions, /createdTime for Customers and Subscriptions.
+        example: '/processedTime'
     required:
       - start
       - end
