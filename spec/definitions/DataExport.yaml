@@ -24,6 +24,8 @@ properties:
     type: string
     enum:
       - csv
+      - json
+      - xml
   arguments:
     description: >-
       Export request arguments that can be passed to filter and/or sort the
