@@ -1,0 +1,33 @@
+type: object
+description: Global Timeline event.
+readOnly: true
+properties:
+  resourceType:
+    type: string
+    description: Related resource type
+    enum:
+      - transactions
+      - subscriptions
+      - invoices
+      - disputes
+  resourceId:
+    description: Related resource Id
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  message:
+    type: string
+    description: Message that describes the event
+  occurredTime:
+    description: The time when this event occurred
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/TransactionLink"
+      - $ref: "#/definitions/SubscriptionLink"
+      - $ref: "#/definitions/InvoiceLink"
+      - $ref: "#/definitions/DisputeLink"
