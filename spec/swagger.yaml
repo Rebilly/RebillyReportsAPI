@@ -65,6 +65,9 @@ tags:
   - name: Data Exports
     description: |
       Data exports.
+  - name: Timelines
+    description: |
+      Events list.
 ################################################################################
 securityDefinitions:
   ApiKey:
