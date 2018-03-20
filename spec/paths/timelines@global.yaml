@@ -1,7 +1,9 @@
 get:
   tags:
     - Timelines
-  summary: Retrieve a list of events in Global timeline. The list is always sorted by occuredTime in descending order
+  summary: Retrieve a list of events in Global timeline
+  description: |
+    The list is always sorted by occuredTime in descending order.
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
