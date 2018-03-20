@@ -67,7 +67,7 @@ tags:
       Data exports.
   - name: Timelines
     description: |
-      Events list.
+      Timelines are holding various events that occurred in the app.
 ################################################################################
 securityDefinitions:
   ApiKey:
