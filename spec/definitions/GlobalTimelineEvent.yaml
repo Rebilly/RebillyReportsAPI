@@ -2,6 +2,22 @@ type: object
 description: Global Timeline event.
 readOnly: true
 properties:
+  eventType:
+    type: string
+    description: Event type
+    enum:
+      - transaction-was-approved
+      - transaction-was-declined
+      - dispute-was-created
+      - invoice-was-paid
+      - invoice-was-past-due
+      - payment-card-was-expired
+      - subscription-trial-was-ended
+      - subscription-was-activated
+      - subscription-was-canceled
+      - subscription-was-renewed
+      - subscription-was-upgraded
+      - subscription-was-downgraded
   resourceType:
     type: string
     description: Related resource type
