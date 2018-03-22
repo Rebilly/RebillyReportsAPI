@@ -5,6 +5,11 @@ get:
   description: |
     The list is always sorted by occuredTime in descending order.
   parameters:
+    - name: transactionId
+      in: path
+      type: string
+      required: true
+      description: Transaction ID
     - $ref: "#/parameters/collectionEventTypes"
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"

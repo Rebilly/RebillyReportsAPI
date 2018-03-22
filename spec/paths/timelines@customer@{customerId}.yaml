@@ -5,6 +5,11 @@ get:
   description: |
     The list is always sorted by occuredTime in descending order.
   parameters:
+    - name: customerId
+      in: path
+      type: string
+      required: true
+      description: Customer ID
     - $ref: "#/parameters/collectionEventTypes"
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
