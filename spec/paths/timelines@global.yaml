@@ -5,7 +5,7 @@ get:
   description: |
     The list is always sorted by occuredTime in descending order.
   parameters:
-    - $ref: "#/parameters/collectionEventType"
+    - $ref: "#/parameters/collectionEventTypes"
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
   responses:

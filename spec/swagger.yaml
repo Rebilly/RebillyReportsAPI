@@ -188,11 +188,11 @@ parameters:
       - text/csv
     default: application/json
     description: The response media type
-  collectionEventType:
-    name: eventType
+  collectionEventTypes:
+    name: eventTypes
     in: query
     type: string
-    description: The event type
+    description: The event types
 ################################################################################
 headers:
   Rate-Limit-Limit:
