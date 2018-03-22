@@ -1,5 +1,5 @@
 type: object
-description: Global Timeline event.
+description: Timeline event.
 readOnly: true
 properties:
   eventType:
