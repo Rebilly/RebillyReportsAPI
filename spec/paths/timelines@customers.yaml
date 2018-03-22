@@ -1,7 +1,7 @@
 get:
   tags:
     - Timelines
-  summary: Retrieve a list of events in Customers timeline
+  summary: Retrieve a list of events in Customers timeline.
   description: |
     The list is always sorted by occuredTime in descending order.
   parameters:
