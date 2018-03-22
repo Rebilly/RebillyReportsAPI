@@ -191,7 +191,7 @@ parameters:
   collectionEventTypes:
     name: eventTypes
     in: query
-    type: string
+    type: array
     description: The event types
 ################################################################################
 headers:
