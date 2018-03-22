@@ -6,18 +6,18 @@ properties:
     type: string
     description: Event type
     enum:
-      - transaction-was-approved
-      - transaction-was-declined
-      - dispute-was-created
-      - invoice-was-paid
-      - invoice-was-past-due
-      - payment-card-was-expired
-      - subscription-trial-was-ended
-      - subscription-was-activated
-      - subscription-was-canceled
-      - subscription-was-renewed
-      - subscription-was-upgraded
-      - subscription-was-downgraded
+      - transaction-approved
+      - transaction-declined
+      - dispute-created
+      - invoice-paid
+      - invoice-past-due
+      - payment-card-expired
+      - subscription-trial-ended
+      - subscription-activated
+      - subscription-canceled
+      - subscription-renewed
+      - subscription-upgraded
+      - subscription-downgraded
   resourceType:
     type: string
     description: Related resource type
@@ -34,6 +34,12 @@ properties:
   message:
     type: string
     description: Message that describes the event
+  data:
+    type: object
+    example:
+      "transactionId": "test-transaction"
+      "amount": 10.00
+      "currency": "USD"
   occurredTime:
     description: The time when this event occurred
     allOf:

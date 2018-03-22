@@ -5,10 +5,9 @@ get:
   description: |
     The list is always sorted by occuredTime in descending order.
   parameters:
+    - $ref: "#/parameters/collectionEventType"
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
-    - $ref: "#/parameters/collectionFilter"
-    - $ref: "#/parameters/collectionCriteria"
   responses:
     200:
       description: Timeline events list was retrieved successfully
