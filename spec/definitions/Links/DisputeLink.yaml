@@ -1,0 +1,11 @@
+type: object
+allOf:
+  - $ref: "#/definitions/LinkNew"
+properties:
+  rel:
+    description: The link type
+    type: string
+    enum:
+      - dispute
+required:
+  - rel

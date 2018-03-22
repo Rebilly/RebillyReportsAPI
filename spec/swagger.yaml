@@ -65,6 +65,9 @@ tags:
   - name: Data Exports
     description: |
       Data exports.
+  - name: Timelines
+    description: |
+      Timelines are holding various events that occurred in the app.
 ################################################################################
 securityDefinitions:
   ApiKey:
@@ -185,6 +188,13 @@ parameters:
       - text/csv
     default: application/json
     description: The response media type
+  collectionEventTypes:
+    name: eventTypes
+    in: query
+    type: array
+    description: The event types
+    items:
+      type: string
 ################################################################################
 headers:
   Rate-Limit-Limit:
