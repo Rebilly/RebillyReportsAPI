@@ -193,6 +193,8 @@ parameters:
     in: query
     type: array
     description: The event types
+    items:
+      type: string
 ################################################################################
 headers:
   Rate-Limit-Limit:
