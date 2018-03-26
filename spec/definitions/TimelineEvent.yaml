@@ -22,11 +22,13 @@ properties:
     type: string
     description: Related resource type
     enum:
-      - transaction
-      - subscription
-      - invoice
-      - dispute
-      - payment-card
+      - transactions
+      - subscriptions
+      - invoices
+      - disputes
+      - payment-cards
+      - customers
+      - gateway-accounts
   resourceId:
     description: Related resource Id
     allOf:
