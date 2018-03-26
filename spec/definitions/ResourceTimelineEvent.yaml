@@ -1,0 +1,39 @@
+type: object
+description: Resource Timeline event.
+readOnly: true
+properties:
+  eventType:
+    type: string
+    description: Event type
+    enum:
+      - transaction-approved
+      - transaction-declined
+      - risk-score-changed
+      - transaction-processed
+      - transaction-process-requested
+      - payment-declined
+      - gateway-account-requested
+      - reconciliation-amount-discrepancy-found
+      - reconciliation-discrepancy-found
+      - reconciliation-complete
+  message:
+    type: string
+    description: Message that describes the event
+  data:
+    type: object
+    example:
+      "transactionId": "test-transaction"
+      "amount": 10.00
+      "currency": "USD"
+  occurredTime:
+    description: The time when this event occurred
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/TransactionLink"
+      - $ref: "#/definitions/CustomerLink"
