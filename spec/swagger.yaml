@@ -68,9 +68,9 @@ tags:
   - name: Timelines
     description: |
       Timelines are holding various events that occurred during a lifetime of a specific resource
-  - name: Event Stream
+  - name: Activity Feed
     description: |
-      Event Stream is holding various events that occurred in the app.
+      Activity Feed is holding various events that occurred in the app.
 ################################################################################
 securityDefinitions:
   ApiKey:

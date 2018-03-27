@@ -1,6 +1,6 @@
 get:
   tags:
-    - Event Stream
+    - Activity Feed
   summary: Retrieve a list of events in the Event Stream
   description: |
     The list is always sorted by occuredTime in descending order.
@@ -27,6 +27,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/GlobalTimelineEvent"
+          $ref: "#/definitions/ActivityFeedEvent"
     401:
       $ref: "#/responses/AccessForbidden"

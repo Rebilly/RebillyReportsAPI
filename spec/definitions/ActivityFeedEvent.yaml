@@ -1,5 +1,5 @@
 type: object
-description: Global Timeline event.
+description: Activity Feed event.
 readOnly: true
 properties:
   eventType:
