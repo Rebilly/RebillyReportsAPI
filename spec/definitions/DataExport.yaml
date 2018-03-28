@@ -29,15 +29,14 @@ properties:
   arguments:
     description: >-
       Export request arguments that can be passed to filter and/or sort the
-      result set
+      result set. See the [arguments guide](https://docs-reconciliation.rebilly.com/getting-started/arguments)
+      for more options and examples.
     type: object
     properties:
       filter:
         description: >-
           The collection items filter requires a special format. Use "," for
           multiple allowed values. Use ";" for multiple fields.
-          See the [filter guide](https://docs-reconciliation.rebilly.com/getting-started/arguments)
-          for more options and examples about this format.
         type: string
       sort:
         type: array
