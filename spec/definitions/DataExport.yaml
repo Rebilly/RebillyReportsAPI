@@ -29,14 +29,14 @@ properties:
   arguments:
     description: >-
       Export request arguments that can be passed to filter and/or sort the
-      result set
+      result set. See the [arguments guide](https://docs-reconciliation.rebilly.com/getting-started/arguments)
+      for more options and examples.
     type: object
     properties:
       filter:
         description: >-
           The collection items filter requires a special format. Use "," for
-          multiple allowed values. Use ";" for multiple fields. See the filter
-          guide for more options and examples about this format.
+          multiple allowed values. Use ";" for multiple fields.
         type: string
       sort:
         type: array
@@ -48,11 +48,12 @@ properties:
       q:
         type: string
         description: The partial search of the text fields.
-      criteria:
-        $ref: '#/definitions/Condition'
   dateRange:
     type: object
-    description: The date range (can be in relative formats).  If omitted, all time will be included.
+    description: >-
+      The date range (can be in relative formats).  If omitted, all time will be included.
+      See the [Date Range guide](https://docs-reconciliation.rebilly.com/getting-started/date-range)
+      for more options and examples.
     properties:
       start:
         type: string
