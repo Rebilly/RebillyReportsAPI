@@ -35,8 +35,9 @@ properties:
       filter:
         description: >-
           The collection items filter requires a special format. Use "," for
-          multiple allowed values. Use ";" for multiple fields. See the filter
-          guide for more options and examples about this format.
+          multiple allowed values. Use ";" for multiple fields.
+          See the [filter guide](https://docs-reconciliation.rebilly.com/getting-started/arguments)
+          for more options and examples about this format.
         type: string
       sort:
         type: array
@@ -48,8 +49,6 @@ properties:
       q:
         type: string
         description: The partial search of the text fields.
-      criteria:
-        $ref: '#/definitions/Condition'
   dateRange:
     type: object
     description: The date range (can be in relative formats).  If omitted, all time will be included.
