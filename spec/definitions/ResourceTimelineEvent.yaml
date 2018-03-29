@@ -8,14 +8,20 @@ properties:
     enum:
       - transaction-approved
       - transaction-declined
+      - dispute-created
       - risk-score-changed
       - transaction-processed
       - transaction-process-requested
       - payment-declined
       - gateway-account-requested
+      - suspended-payment-completed
       - reconciliation-amount-discrepancy-found
       - reconciliation-discrepancy-found
       - reconciliation-complete
+  resourceId:
+    description: Related resource Id
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   message:
     type: string
     description: Message that describes the event
@@ -23,7 +29,7 @@ properties:
     type: object
     example:
       "transactionId": "test-transaction"
-      "amount": 10.00
+      "amount": 10
       "currency": "USD"
   occurredTime:
     description: The time when this event occurred
