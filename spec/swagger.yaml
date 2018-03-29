@@ -67,7 +67,10 @@ tags:
       Data exports.
   - name: Timelines
     description: |
-      Timelines are holding various events that occurred in the app.
+      Timelines are holding various events that occurred during a lifetime of a specific resource
+  - name: Activity Feed
+    description: |
+      Activity Feed is holding various events that occurred in the app.
 ################################################################################
 securityDefinitions:
   ApiKey:

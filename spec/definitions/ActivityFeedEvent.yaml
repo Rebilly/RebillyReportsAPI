@@ -1,5 +1,5 @@
 type: object
-description: Global Timeline event.
+description: Activity Feed event.
 readOnly: true
 properties:
   eventType:
@@ -36,12 +36,6 @@ properties:
   message:
     type: string
     description: Message that describes the event
-  data:
-    type: object
-    example:
-      "transactionId": "test-transaction"
-      "amount": 10.00
-      "currency": "USD"
   occurredTime:
     description: The time when this event occurred
     allOf:

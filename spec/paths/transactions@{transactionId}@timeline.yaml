@@ -1,10 +1,15 @@
 get:
   tags:
     - Timelines
-  summary: Retrieve a list of events in Global timeline
+  summary: Retrieve a list of events in Transactions timeline.
   description: |
     The list is always sorted by occuredTime in descending order.
   parameters:
+    - name: transactionId
+      in: path
+      type: string
+      required: true
+      description: Transaction ID
     - $ref: "#/parameters/collectionEventTypes"
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
@@ -27,6 +32,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/GlobalTimelineEvent"
+          $ref: "#/definitions/ResourceTimelineEvent"
     401:
       $ref: "#/responses/AccessForbidden"
