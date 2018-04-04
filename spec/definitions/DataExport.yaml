@@ -39,12 +39,10 @@ properties:
           multiple allowed values. Use ";" for multiple fields.
         type: string
       sort:
-        type: array
+        type: string
         description: >-
           The collection items sort field and order (prefix with "-" for
           descending sort).
-        items:
-          type: string
       q:
         type: string
         description: The partial search of the text fields.
