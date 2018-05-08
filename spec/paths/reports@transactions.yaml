@@ -29,14 +29,17 @@ get:
        - transactionResult
        - transactionType
        - gatewayAccount
-       - leadsAffiliate
-       - leadsCampaign
-       - leadsContent
-       - leadsMedium
-       - leadsSalesAgent
-       - leadsSource
-       - leadsSubAffiliate
-       - leadsTerm
+       - gateway
+       - retryNumber
+       - plan
+       - leadSource.source
+       - leadSource.medium
+       - leadSource.campaign
+       - leadSource.content
+       - leadSource.term
+       - leadSource.affiliate
+       - leadSource.subAffiliate
+       - leadSource.salesAgent
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
