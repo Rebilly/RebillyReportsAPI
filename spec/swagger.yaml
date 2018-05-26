@@ -150,13 +150,13 @@ parameters:
     minimum: -720
     maximum: 720
   collectionFilter:
-      name: filter
-      in: query
-      type: string
-      description: |
-        The collection items filter requires a special format.
-        Use "," for multiple allowed values.  Use ";" for multiple fields.
-        See the [filter guide](https://rebilly.github.io/RebillyAPI/#section/Using-filter) for more options and examples about this format.
+    name: filter
+    in: query
+    type: string
+    description: |
+      The collection items filter requires a special format.
+      Use "," for multiple allowed values.  Use ";" for multiple fields.
+      See the [filter guide](https://rebilly.github.io/RebillyAPI/#section/Using-filter) for more options and examples about this format.
   collectionQuery:
     name: q
     in: query
