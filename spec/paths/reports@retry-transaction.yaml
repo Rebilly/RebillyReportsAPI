@@ -18,7 +18,6 @@ get:
       type: string
       format: date-time
     - $ref: "#/parameters/collectionFilter"
-    - $ref: "#/parameters/collectionCriteria"
   responses:
     200:
       description: Report was retrieved successfully
