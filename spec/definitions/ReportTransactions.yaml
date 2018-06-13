@@ -15,6 +15,9 @@ properties:
         approvedThroughput:
           description: Approved sale transactions to all transactions percentage
           type: integer
+        authApprovalCount:
+          description: Approved auth transactions count
+          type: integer
         salesCount:
           description: Sales count
           type: integer
