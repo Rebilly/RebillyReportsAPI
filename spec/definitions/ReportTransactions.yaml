@@ -18,6 +18,12 @@ properties:
         authApprovalCount:
           description: Approved auth transactions count
           type: integer
+        disputesRate:
+          description: Disputed transactions to all approved sale and capture transactions percentage
+          type: integer
+        disputesCount:
+          description: Disputed transactions to all approved sale and capture transactions count
+          type: integer
         salesCount:
           description: Sales count
           type: integer
