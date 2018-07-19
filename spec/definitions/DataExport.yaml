@@ -113,6 +113,14 @@ properties:
     description: Data export updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
+  expiredTime:
+    description: The time when this data export will be expired
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  purgedTime:
+    description: The time when this export's file will not be available
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   status:
     description: Status of export request
     readOnly: true
@@ -122,6 +130,9 @@ properties:
       - queued
       - processing
       - completed
+      - failed
+      - expired
+      - purged
   _links:
     type: array
     description: The links related to resource
