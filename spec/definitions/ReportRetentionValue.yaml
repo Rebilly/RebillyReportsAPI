@@ -41,19 +41,3 @@ properties:
                 type: number
                 format: double
                 description: The amount of transactions (income transactions - loss transactions)
-        forecastPeriods:
-          type: array
-          items:
-            type: object
-            description: The period for the given future aggregation
-            properties:
-              period:
-                type: integer
-                description: |
-                  Future retention period (0 - first, 1 - second etc) since the beginning boundary of the aggregation
-              retentionAverage:
-                type: number
-                format: double
-                description: |
-                  Predicted summary amount of all transactions for all periods up to the current one
-                  divided by the predicted aggregation customers number
