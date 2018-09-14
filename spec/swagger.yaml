@@ -84,8 +84,10 @@ securityDefinitions:
     in: header
   JWT:
     description: |
-      You can create a JSON Web Token (JWT) via our Sessions resource.
-    type: basic
+      You can create a JSON Web Token (JWT) via our [JWT Session resource](#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
+    name: "Authorization: Bearer jwt"
+    type: apiKey
+    in: header
   RebAuth:
     description: |
       Only for the Tokens resource.
@@ -165,8 +167,11 @@ parameters:
   collectionSort:
     name: sort
     in: query
-    type: string
+    type: array
+    collectionFormat: csv
     description: The collection items sort field and order (prefix with "-" for descending sort).
+    items:
+      type: string
   collectionFields:
     name: fields
     in: query
