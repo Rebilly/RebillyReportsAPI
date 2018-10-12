@@ -85,9 +85,12 @@ securityDefinitions:
   JWT:
     description: |
       You can create a JSON Web Token (JWT) via our [JWT Session resource](#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
-    name: "Authorization: Bearer jwt"
+    name: "Authorization"
     type: apiKey
     in: header
+    # OAS3 supports bearer http scheme: temproal fix for OAS2 bellow
+    x-type: http
+    x-scheme: bearer
   RebAuth:
     description: |
       Only for the Tokens resource.
