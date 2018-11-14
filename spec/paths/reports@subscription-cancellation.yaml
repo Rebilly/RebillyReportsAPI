@@ -58,6 +58,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        $ref: "#/definitions/SubscriptionCancellation"
+        $ref: "#/definitions/SubscriptionCancellationReport"
     401:
       $ref: "#/responses/AccessForbidden"
