@@ -3992,7 +3992,7 @@
       "collectionExpand": {
         "name": "expand",
         "in": "query",
-        "description": "Expand response to get full related object intead of ID. See the expand guide for more info.",
+        "description": "Expand response to get full related object instead of ID. See the expand guide for more info.",
         "schema": {
           "type": "string"
         }
@@ -4146,7 +4146,7 @@
         "in": "header"
       },
       "JWT": {
-        "description": "You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).\nUsage format: `Bearer JWT`\n",
+        "description": "You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).\nUsage format: `Bearer <JWT>`\n",
         "type": "http",
         "scheme": "bearer",
         "bearerFormat": "JWT"

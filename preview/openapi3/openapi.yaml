@@ -2713,7 +2713,7 @@ components:
     collectionExpand:
       name: expand
       in: query
-      description: Expand response to get full related object intead of ID. See the expand guide for more info.
+      description: Expand response to get full related object instead of ID. See the expand guide for more info.
       schema:
         type: string
     collectionFields:
@@ -2836,7 +2836,7 @@ components:
     JWT:
       description: |
         You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).
-        Usage format: `Bearer JWT`
+        Usage format: `Bearer <JWT>`
       type: http
       scheme: bearer
       bearerFormat: JWT
