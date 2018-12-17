@@ -4146,9 +4146,10 @@
         "in": "header"
       },
       "JWT": {
-        "description": "You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).\nUsage format: `Bearer `\n",
+        "description": "You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).\nUsage format: `Bearer JWT`\n",
         "type": "http",
-        "scheme": "bearer"
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       },
       "RebAuth": {
         "description": "When you sign up for an account, you are given your first secret API key.\nTo do so please [follow this link.](https://app.rebilly.com/signup)\nAlso you can generate additional API keys, and delete API keys (as you may\nneed to rotate your keys in the future). All API keys can be restricted to a\nsmall set of permissions (restricted API keys).\n",
