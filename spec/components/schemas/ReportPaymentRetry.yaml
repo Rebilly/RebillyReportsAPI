@@ -13,7 +13,7 @@ properties:
           description: Attepmts count
           type: integer
         successfulTransactions:
-          description: Successful transactons count
+          description: Successful transactions count
           type: integer
         successRate:
           description: Successful transactions ratio
