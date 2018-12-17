@@ -9,26 +9,30 @@ get:
       in: query
       description: Report start date
       required: true
-      type: string
-      format: date-time
+      schema:
+        type: string
+        format: date-time
     - name: periodEnd
       in: query
       description: Report end date
       required: true
-      type: string
-      format: date-time
-    - $ref: "#/parameters/collectionFilter"
+      schema:
+        type: string
+        format: date-time
+    - $ref: "#/components/parameters/collectionFilter"
   responses:
     200:
       description: Report was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/ReportPaymentRetry"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ReportPaymentRetry"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"

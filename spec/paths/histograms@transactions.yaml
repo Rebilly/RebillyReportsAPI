@@ -9,66 +9,73 @@ get:
       in: query
       description: Report start day
       required: true
-      type: string
-      format: date-time
+      schema:
+        type: string
+        format: date-time
     - name: periodEnd
       in: query
       description: Report end day
       required: true
-      type: string
-      format: date-time
+      schema:
+        type: string
+        format: date-time
     - name: aggregationField
       in: query
       description: Report aggregation field
       required: true
-      type: string
-      enum:
-       - website
-       - currency
-       - bin
-       - rebillNumber
-       - transactionResult
-       - transactionType
-       - gatewayAccount
-       - leadsAffiliate
-       - leadsCampaign
-       - leadsContent
-       - leadsMedium
-       - leadsSalesAgent
-       - leadsSource
-       - leadsSubAffiliate
-       - leadsTerm
+      schema:
+        type: string
+        enum:
+          - website
+          - currency
+          - bin
+          - rebillNumber
+          - transactionResult
+          - transactionType
+          - gatewayAccount
+          - leadsAffiliate
+          - leadsCampaign
+          - leadsContent
+          - leadsMedium
+          - leadsSalesAgent
+          - leadsSource
+          - leadsSubAffiliate
+          - leadsTerm
     - name: aggregationPeriod
       in: query
       description: Report aggregation period
       required: true
-      type: string
-      enum:
-       - hour
-       - day
-       - month
+      schema:
+        type: string
+        enum:
+          - hour
+          - day
+          - month
     - name: metric
       in: query
       description: Report metric
       required: true
-      type: string
-      enum:
-       - ApprovalThroughput
-       - AuthApprovalThroughput
-       - AvgSalesPrice
-       - Refunds
-       - RefundCount
-       - Sales
-       - SalesCount
+      schema:
+        type: string
+        enum:
+          - ApprovalThroughput
+          - AuthApprovalThroughput
+          - AvgSalesPrice
+          - Refunds
+          - RefundCount
+          - Sales
+          - SalesCount
   responses:
     200:
       description: Transaction report was retrieved successfully.
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/HistogramData"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/HistogramData"

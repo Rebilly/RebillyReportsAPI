@@ -8,58 +8,63 @@ get:
       in: query
       description: Report start day
       required: true
-      type: string
-      format: date-time
+      schema:
+        type: string
+        format: date-time
     - name: periodEnd
       in: query
       description: Report end day
       required: true
-      type: string
-      format: date-time
+      schema:
+        type: string
+        format: date-time
     - name: aggregationField
       in: query
       description: Report aggregation field
       required: true
-      type: string
-      enum:
-       - website
-       - currency
-       - bin
-       - rebillNumber
-       - transactionResult
-       - transactionType
-       - gatewayAccount
-       - gateway
-       - retryNumber
-       - plan
-       - leadSource.source
-       - leadSource.medium
-       - leadSource.campaign
-       - leadSource.content
-       - leadSource.term
-       - leadSource.affiliate
-       - leadSource.subAffiliate
-       - leadSource.salesAgent
-    - $ref: "#/parameters/collectionLimit"
-    - $ref: "#/parameters/collectionOffset"
-    - $ref: "#/parameters/collectionFilter"
+      schema:
+        type: string
+        enum:
+          - website
+          - currency
+          - bin
+          - rebillNumber
+          - transactionResult
+          - transactionType
+          - gatewayAccount
+          - gateway
+          - retryNumber
+          - plan
+          - leadSource.source
+          - leadSource.medium
+          - leadSource.campaign
+          - leadSource.content
+          - leadSource.term
+          - leadSource.affiliate
+          - leadSource.subAffiliate
+          - leadSource.salesAgent
+    - $ref: "#/components/parameters/collectionLimit"
+    - $ref: "#/components/parameters/collectionOffset"
+    - $ref: "#/components/parameters/collectionFilter"
   responses:
     200:
       description: Report was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
+          $ref: "#/components/headers/Rate-Limit-Reset"
         Pagination-Total:
-          $ref: "#/headers/Pagination-Total"
+          $ref: "#/components/headers/Pagination-Total"
         Pagination-Limit:
-          $ref: "#/headers/Pagination-Limit"
+          $ref: "#/components/headers/Pagination-Limit"
         Pagination-Offset:
-          $ref: "#/headers/Pagination-Offset"
-      schema:
-        $ref: "#/definitions/ReportTransactions"
+          $ref: "#/components/headers/Pagination-Offset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ReportTransactions"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
