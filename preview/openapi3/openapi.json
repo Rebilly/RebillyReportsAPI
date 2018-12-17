@@ -3162,7 +3162,7 @@
                   "type": "integer"
                 },
                 "attempts": {
-                  "description": "Attepmts count",
+                  "description": "Attempts count",
                   "type": "integer"
                 },
                 "successfulTransactions": {
