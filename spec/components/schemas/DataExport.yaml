@@ -8,7 +8,7 @@ properties:
     description: The export identifier string
     readOnly: true
     allOf:
-      - $ref: "#/definitions/ResourceId"
+      - $ref: "#/components/schemas/ResourceId"
   name:
     description: Export name
     type: string
@@ -104,15 +104,15 @@ properties:
   scheduledTime:
     description: The date and time this data export is scheduled to generate a file
     allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+      - $ref: "#/components/schemas/ServerTimestamp"
   createdTime:
     description: The time the data export was requested
     allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+      - $ref: "#/components/schemas/ServerTimestamp"
   updatedTime:
     description: Data export updated time
     allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+      - $ref: "#/components/schemas/ServerTimestamp"
   status:
     description: Status of export request
     readOnly: true
@@ -129,7 +129,8 @@ properties:
     minItems: 1
     maxItems: 4
     items:
-      - $ref: "#/definitions/LinkSelf"
-      - $ref: "#/definitions/LinkUser"
-      - $ref: "#/definitions/LinkFileDownload"
-      - $ref: "#/definitions/LinkSignedLink"
+      anyOf:
+      - $ref: "#/components/schemas/LinkSelf"
+      - $ref: "#/components/schemas/LinkUser"
+      - $ref: "#/components/schemas/LinkFileDownload"
+      - $ref: "#/components/schemas/LinkSignedLink"

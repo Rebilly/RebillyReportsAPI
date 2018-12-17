@@ -7,43 +7,43 @@ items:
     invoiceId:
       description: Invoice ID
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     planId:
       description: Plan ID
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     subscriptionId:
       description: Subscription ID
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     customerId:
       description: Customer ID
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     paymentId:
       description: Payment ID
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     createdTime:
       description: Invoice created time
       allOf:
-        - $ref: "#/definitions/ServerTimestamp"
+        - $ref: "#/components/schemas/ServerTimestamp"
     issuedTime:
       description: Invoice issuing time
       allOf:
-        - $ref: "#/definitions/ServerTimestamp"
+        - $ref: "#/components/schemas/ServerTimestamp"
     dueTime:
       description: Invoice due time
       allOf:
-        - $ref: "#/definitions/ServerTimestamp"
+        - $ref: "#/components/schemas/ServerTimestamp"
     closedTime:
       description: Invoice closing time
       allOf:
-        - $ref: "#/definitions/ServerTimestamp"
+        - $ref: "#/components/schemas/ServerTimestamp"
     canceledTime:
       description: Invoice canceling time
       allOf:
-        - $ref: "#/definitions/ServerTimestamp"
+        - $ref: "#/components/schemas/ServerTimestamp"
     recurringAmount:
       type: number
       format: double
@@ -68,11 +68,11 @@ items:
         transactionId:
           description: Refund transaction ID
           allOf:
-            - $ref: "#/definitions/ResourceId"
+            - $ref: "#/components/schemas/ResourceId"
         transactionCreatedTime:
           description: Refund transaction creation time
           allOf:
-            - $ref: "#/definitions/ServerTimestamp"
+            - $ref: "#/components/schemas/ServerTimestamp"
     chargeback:
       type: object
       description: Contains data for the related chargeback (dispute) if it exists
@@ -81,11 +81,11 @@ items:
         disputeId:
           description: Dispute ID
           allOf:
-            - $ref: "#/definitions/ResourceId"
+            - $ref: "#/components/schemas/ResourceId"
         disputeCreatedTime:
           description: Dispute creation time
           allOf:
-            - $ref: "#/definitions/ServerTimestamp"
+            - $ref: "#/components/schemas/ServerTimestamp"
     lead:
       type: object
       description: Related lead source if it exists
@@ -118,4 +118,4 @@ items:
         createdTime:
           description: Lead source creation time
           allOf:
-            - $ref: "#/definitions/ServerTimestamp"
+            - $ref: "#/components/schemas/ServerTimestamp"

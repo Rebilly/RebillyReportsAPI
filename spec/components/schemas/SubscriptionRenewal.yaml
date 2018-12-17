@@ -10,7 +10,7 @@ properties:
         planId:
           description: Plan identifier for which subscriptions are counted
           allOf:
-            - $ref: "#/definitions/ResourceId"
+            - $ref: "#/components/schemas/ResourceId"
         allRenewalCount:
           type: integer
           description: All renewed subscriptions number

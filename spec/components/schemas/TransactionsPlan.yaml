@@ -7,26 +7,26 @@ items:
     transactionId:
       description: Transaction's identifier
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     websiteId:
       description: Website's identifier
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     customerId:
       description: Customer's identifier
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     customerEmail:
       type: string
       description: Customer's email
     planId:
       description: Plan's identifier
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     subscriptionId:
       description: Subscription's identifier
       allOf:
-        - $ref: "#/definitions/ResourceId"
+        - $ref: "#/components/schemas/ResourceId"
     currency:
       type: string
       description: Transaction's currency 3-letters code
@@ -40,7 +40,7 @@ items:
     createdTime:
       description: Transaction's created time
       allOf:
-        - $ref: "#/definitions/ServerTimestamp"
+        - $ref: "#/components/schemas/ServerTimestamp"
     type:
       type: string
       description: Transaction's type

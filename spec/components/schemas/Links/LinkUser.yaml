@@ -1,11 +1,11 @@
 type: object
 allOf:
-  - $ref: "#/definitions/Link"
+  - $ref: "#/components/schemas/Link"
 properties:
   rel:
     description: The link type
     type: string
     enum:
-      - self
+      - user
 required:
   - rel

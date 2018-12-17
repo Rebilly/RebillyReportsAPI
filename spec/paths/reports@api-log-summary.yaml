@@ -7,26 +7,30 @@ get:
     - name: periodStart
       in: query
       description: Report start date
-      type: string
       required: true
+      schema:
+        type: string
     - name: periodEnd
       in: query
       description: Report end date
-      type: string
       required: true
-    - $ref: "#/parameters/collectionLimit"
-    - $ref: "#/parameters/collectionOffset"
+      schema:
+        type: string
+    - $ref: "#/components/parameters/collectionLimit"
+    - $ref: "#/components/parameters/collectionOffset"
   responses:
     200:
       description: Report was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/APILogSummary"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/APILogSummary"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"

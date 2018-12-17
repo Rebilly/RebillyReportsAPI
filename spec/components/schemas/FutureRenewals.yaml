@@ -24,7 +24,7 @@ properties:
               planId:
                 description: Plan identifier
                 allOf:
-                  - $ref: "#/definitions/ResourceId"
+                  - $ref: "#/components/schemas/ResourceId"
               count:
                 type: integer
                 description: Amount of plan's future renewals

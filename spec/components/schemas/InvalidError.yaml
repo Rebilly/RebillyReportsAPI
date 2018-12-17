@@ -1,6 +1,6 @@
 allOf:
   -
-    $ref: "#/definitions/Error"
+    $ref: "#/components/schemas/Error"
   -
     type: object
     properties:
