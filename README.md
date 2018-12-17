@@ -3,27 +3,27 @@
 
 ## Links
 
-- Documentation(ReDoc): https://rebilly.github.io/RebillyReportsAPI/
-- Look full spec:
-    + JSON https://rebilly.github.io/RebillyReportsAPI/swagger.json
-    + YAML https://rebilly.github.io/RebillyReportsAPI/swagger.yaml
-- Preview spec version for branch `[branch]`: https://rebilly.github.io/RebillyReportsAPI/preview/[branch]
+- [Reference Documentation (ReDoc)](https://rebilly.github.io/RebillyReportsAPI/)
+- OpenAPI Raw Files: [JSON](https://rebilly.github.io/RebillyReportsAPI/openapi.json) [YAML](https://rebilly.github.io/RebillyReportsAPI/openapi.yaml)
 
 **Warning:** All above links are updated only after Travis CI finishes deployment
 
-## Development
+## Working on specification
 ### Install
 
 1. Install [Node JS](https://nodejs.org/)
-2. Clone repo and `cd`
-    + Run `npm install`
+2. Clone repo and run `npm install` in the repo root
 
 ### Usage
 
-1. Run `npm start`
-2. Checkout console output to see where local server is started. You can use all [links](#links) (except `preview`) by replacing https://rebilly.github.io/RebillyReportsAPI/ with url from the message: `Server started <url>`
-3. Make changes using your favorite editor or `swagger-editor` (look for URL in console output)
-4. All changes are immediately propagated to your local server, moreover all documentation pages will be automagically refreshed in a browser after each change
-**TIP:** you can open `swagger-editor`, documentation and `swagger-ui` in parallel
-5. Once you finish with the changes you can run tests using: `npm test`
-6. Share your changes with the rest of the world by committing :smile:
+#### `npm start`
+Starts the development server.
+
+#### `npm run build`
+Bundles the spec and prepares web_deploy folder with static assets.
+
+#### `npm test`
+Validates the spec.
+
+#### `npm run gh-pages`
+Deploys docs to GitHub Pages. You don't need to run it manually if you have Travis CI configured.

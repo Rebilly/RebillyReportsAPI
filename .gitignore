@@ -1,6 +1,8 @@
 # Dir for API portal deploy
 web_deploy
 
+package-lock.json
+
 # Logs
 logs
 *.log

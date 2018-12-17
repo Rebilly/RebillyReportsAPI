@@ -2,25 +2,15 @@
   "name": "rebilly-openapi-reports-spec",
   "version": "0.0.1",
   "dependencies": {
-    "bower": "^1.7.7",
-    "connect": "^3.4.1",
-    "cors": "^2.7.1",
-    "deploy-to-gh-pages": "^1.1.0",
-    "gulp": "^3.9.1",
-    "gulp-connect": "^4.2.0",
-    "gulp-util": "^3.0.7",
     "json-merge-patch": "^0.2.3",
-    "portfinder": "^1.0.3",
-    "shelljs": "^0.7.0",
-    "swagger-repo": "^1.4.2"
+    "json-pointer": "^0.6.0",
+    "swagger-repo": "2.0.0-rc.7"
   },
   "private": true,
   "scripts": {
-    "deploy": "npm run build && deploy-to-gh-pages --update web_deploy",
-    "build": "node ./scripts/build.js",
-    "swagger": "swagger-repo",
+    "start": "swagger-repo serve",
+    "build": "swagger-repo build -o web_deploy",
     "test": "swagger-repo validate",
-    "start": "gulp serve",
-    "deploy-branch": "node ./scripts/deploy-branch"
+    "gh-pages": "swagger-repo gh-pages"
   }
 }
