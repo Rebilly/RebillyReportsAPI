@@ -63,8 +63,8 @@ properties:
         example: 'today'
       field:
         type: string
-        description: The field to apply date range to. Defaults to /processedTime for Transactions, /createdTime for Customers and Subscriptions.
-        example: '/processedTime'
+        description: The field to apply date range to. Defaults to `processedTime` for Transactions, `createdTime` for Customers and Subscriptions.
+        example: 'processedTime'
     required:
       - start
       - end
