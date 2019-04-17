@@ -7,5 +7,6 @@ allOf:
         type: object
         properties:
           field:
+            type: string
             default: 'processedTime'
             example: 'processedTime'
