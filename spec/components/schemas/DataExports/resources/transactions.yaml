@@ -1,0 +1,11 @@
+description: Transactions resource type to export
+allOf:
+  - $ref: "#/components/schemas/DataExport"
+  - type: "object"
+    properties:
+      dateRange:
+        type: object
+        properties:
+          field:
+            default: 'processedTime'
+            example: 'processedTime'

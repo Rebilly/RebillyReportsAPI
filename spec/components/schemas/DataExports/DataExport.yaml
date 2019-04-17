@@ -1,4 +1,6 @@
 type: object
+discriminator:
+  propertyName: resource
 required:
   - name
   - format
@@ -55,16 +57,15 @@ properties:
     properties:
       start:
         type: string
-        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
+        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.resources.php).
         example: 'yesterday'
       end:
         type: string
-        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
+        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.resources.php).
         example: 'today'
       field:
         type: string
-        description: The field to apply date range to. Defaults to `processedTime` for Transactions, `createdTime` for Customers and Subscriptions.
-        example: 'processedTime'
+        description: The field to apply date range to.
     required:
       - start
       - end
