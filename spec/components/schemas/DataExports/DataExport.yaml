@@ -58,11 +58,11 @@ properties:
     properties:
       start:
         type: string
-        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.resources.php).
+        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
         example: 'yesterday'
       end:
         type: string
-        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.resources.php).
+        description: Any valid datetime arguments including [relative datetime arguments](http://php.net/manual/en/datetime.formats.php).
         example: 'today'
       field:
         type: string
