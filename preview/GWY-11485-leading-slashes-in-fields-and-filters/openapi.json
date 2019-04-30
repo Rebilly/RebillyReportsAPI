@@ -2615,6 +2615,7 @@
             "enum": [
               "csv",
               "json",
+              "json-api",
               "xml"
             ]
           },
