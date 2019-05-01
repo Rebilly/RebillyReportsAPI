@@ -2578,6 +2578,9 @@
       },
       "DataExport": {
         "type": "object",
+        "discriminator": {
+          "propertyName": "resource"
+        },
         "required": [
           "name",
           "format",
@@ -2650,8 +2653,7 @@
               },
               "field": {
                 "type": "string",
-                "description": "The field to apply date range to. Defaults to /processedTime for Transactions, /createdTime for Customers and Subscriptions.",
-                "example": "/processedTime"
+                "description": "The field to apply date range to."
               }
             },
             "required": [
@@ -2761,6 +2763,75 @@
             }
           }
         }
+      },
+      "customers": {
+        "description": "Customers resource type to export",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DataExport"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dateRange": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "type": "string",
+                    "default": "createdTime",
+                    "example": "createdTime"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "subscriptions": {
+        "description": "Subscriptions resource type to export",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DataExport"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dateRange": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "type": "string",
+                    "default": "createdTime",
+                    "example": "createdTime"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "transactions": {
+        "description": "Transactions resource type to export",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DataExport"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dateRange": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "type": "string",
+                    "default": "processedTime",
+                    "example": "processedTime"
+                  }
+                }
+              }
+            }
+          }
+        ]
       },
       "DccMarkup": {
         "type": "object",
