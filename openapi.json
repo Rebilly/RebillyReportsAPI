@@ -4183,7 +4183,9 @@
         "description": "The resource identifier string",
         "required": true,
         "schema": {
-          "type": "string"
+          "type": "string",
+          "maxLength": 50,
+          "pattern": "^[@~\\-\\.\\w\\d]+$"
         }
       }
     },

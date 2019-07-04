@@ -2828,6 +2828,8 @@ components:
       required: true
       schema:
         type: string
+        maxLength: 50
+        pattern: '^[@~\-\.\w\d]+$'
   headers:
     Pagination-Limit:
       description: Items per page limit
