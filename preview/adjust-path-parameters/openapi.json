@@ -40,10 +40,6 @@
       "description": "Data exports.\n"
     },
     {
-      "name": "Timelines",
-      "description": "Timelines are holding various events that occurred during a lifetime of a specific resource\n"
-    },
-    {
       "name": "Activity Feed",
       "description": "Activity Feed is holding various events that occurred in the app.\n"
     }
@@ -2582,6 +2578,9 @@
       },
       "DataExport": {
         "type": "object",
+        "discriminator": {
+          "propertyName": "resource"
+        },
         "required": [
           "name",
           "format",
@@ -2616,6 +2615,7 @@
             "enum": [
               "csv",
               "json",
+              "json-api",
               "xml"
             ]
           },
@@ -2653,8 +2653,7 @@
               },
               "field": {
                 "type": "string",
-                "description": "The field to apply date range to. Defaults to /processedTime for Transactions, /createdTime for Customers and Subscriptions.",
-                "example": "/processedTime"
+                "description": "The field to apply date range to."
               }
             },
             "required": [
@@ -2765,6 +2764,75 @@
           }
         }
       },
+      "customers": {
+        "description": "Customers resource type to export",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DataExport"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dateRange": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "type": "string",
+                    "default": "createdTime",
+                    "example": "createdTime"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "subscriptions": {
+        "description": "Subscriptions resource type to export",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DataExport"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dateRange": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "type": "string",
+                    "default": "createdTime",
+                    "example": "createdTime"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "transactions": {
+        "description": "Transactions resource type to export",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DataExport"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dateRange": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "type": "string",
+                    "default": "processedTime",
+                    "example": "processedTime"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
       "DccMarkup": {
         "type": "object",
         "properties": {
@@ -2817,10 +2885,19 @@
           "status": {
             "type": "integer",
             "minimum": 100,
-            "maximum": 600
+            "maximum": 600,
+            "description": "The HTTP status code."
           },
           "error": {
             "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "description": "A URI reference [[RFC3986](https://tools.ietf.org/html/rfc3986)] that identifies the problem type. It should provide human-readable documentation for the problem type. When this member is not present, its value is assumed to be \"about:blank\"."
+          },
+          "title": {
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type. It SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization."
           }
         }
       },
@@ -2901,11 +2978,34 @@
           {
             "type": "object",
             "properties": {
-              "details": {
+              "invalidFields": {
                 "type": "array",
                 "items": {
-                  "type": "string"
-                }
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string",
+                      "description": "The field name. Dot notation is used for nested object field names."
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "field": "field1",
+                    "message": "field1 is invalid"
+                  },
+                  {
+                    "field": "subObject.field2",
+                    "message": "field2 is invalid"
+                  },
+                  {
+                    "field": "subObject.field2",
+                    "message": "another error in the field2"
+                  }
+                ]
               }
             }
           }
