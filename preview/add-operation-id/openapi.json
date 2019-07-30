@@ -61,7 +61,7 @@
           "Customers"
         ],
         "summary": "Retrieve customer lifetime summary metrics",
-        "operationId": "GetCustomerSummaryMetricCollection",
+        "operationId": "GetCustomerSummaryMetricReport",
         "description": "Retrieve customer lifetime summary metrics\n",
         "parameters": [
           {
@@ -346,7 +346,7 @@
           "Histograms"
         ],
         "summary": "Get Transaction histogram report data",
-        "operationId": "GetHistogramTransactionCollection",
+        "operationId": "GetHistogramTransactionReport",
         "description": "Get Transaction histogram report data.\n",
         "parameters": [
           {
@@ -459,7 +459,7 @@
           "Reports"
         ],
         "summary": "Retrieve a report of payments successful retries throughput",
-        "operationId": "GetReportPaymentSuccessByDeclineReason",
+        "operationId": "GetPaymentSuccessByDeclineReasonReport",
         "description": "Retrieve a report of payments successful retries throughput",
         "parameters": [
           {
@@ -535,7 +535,7 @@
           "Reports"
         ],
         "summary": "Retrieve a API Log Summary Report",
-        "operationId": "GetReportApiLogSummary",
+        "operationId": "GetApiLogSummaryReport",
         "description": "Retrieve a API Log Summary Report",
         "parameters": [
           {
@@ -597,7 +597,7 @@
           "Reports"
         ],
         "summary": "Retrieve a cumulative subscriptions plans report",
-        "operationId": "GetReportCumulativeSubscriptionPlan",
+        "operationId": "GetCumulativeSubscriptionPlanReport",
         "description": "Retrieve a cumulative subscriptions report aggregated by day and plans",
         "parameters": [
           {
@@ -689,7 +689,7 @@
           "Reports"
         ],
         "summary": "Retrieve a cumulative subscriptions report",
-        "operationId": "GetReportCumulativeSubscription",
+        "operationId": "GetCumulativeSubscriptionReport",
         "description": "Retrieve a cumulative subscriptions report",
         "parameters": [
           {
@@ -767,7 +767,7 @@
           "Reports"
         ],
         "summary": "Retrieve dashboard data",
-        "operationId": "GetReportDashboard",
+        "operationId": "GetDashboardReport",
         "description": "Retrieve dashboard data",
         "parameters": [
           {
@@ -845,7 +845,7 @@
           "Reports"
         ],
         "summary": "Retrieve a DCC markup report",
-        "operationId": "GetReportDccMarkup",
+        "operationId": "GetDccMarkupReport",
         "description": "Retrieve a DCC markup report",
         "parameters": [
           {
@@ -936,7 +936,7 @@
           "Reports"
         ],
         "summary": "Retrieve a disputes report",
-        "operationId": "GetReportDispute",
+        "operationId": "GetDisputeReport",
         "description": "Retrieve a disputes report\n",
         "parameters": [
           {
@@ -1021,7 +1021,7 @@
           "Reports"
         ],
         "summary": "Retrieve a events triggered summary report",
-        "operationId": "GetReportEventTriggered",
+        "operationId": "GetTriggeredEventReport",
         "description": "Retrieve a events triggered summary report.\n",
         "parameters": [
           {
@@ -1092,7 +1092,7 @@
           "Reports"
         ],
         "summary": "Retrieve a rules matched summary report",
-        "operationId": "GetReportEventTriggeredRule",
+        "operationId": "GetTriggeredEventRuleReport",
         "description": "Retrieve a rules matched summary report by events triggered.\n",
         "parameters": [
           {
@@ -1183,7 +1183,7 @@
           "Reports"
         ],
         "summary": "Retrieve a future renewals report",
-        "operationId": "GetReportFutureRenewal",
+        "operationId": "GetFutureRenewalReport",
         "description": "Retrieve a future renewals report",
         "parameters": [
           {
@@ -1254,7 +1254,7 @@
           "Reports"
         ],
         "summary": "Retrieve a renewal sales report",
-        "operationId": "GetReportRenewalSale",
+        "operationId": "GetRenewalSaleReport",
         "description": "Retrieve a renewal sales report\n",
         "parameters": [
           {
@@ -1325,7 +1325,7 @@
           "Reports"
         ],
         "summary": "Retrieve a retention percentage report",
-        "operationId": "GetReportRetentionPercentage",
+        "operationId": "GetRetentionPercentageReport",
         "description": "Retrieve a retention percentage report\n",
         "parameters": [
           {
@@ -1442,7 +1442,7 @@
           "Reports"
         ],
         "summary": "Retrieve a retention value report",
-        "operationId": "GetReportRetentionValue",
+        "operationId": "GetRetentionValueReport",
         "description": "The retention value report shows the count of new customers\nper aggregation bucket and the corresponding per customer value over time.\n",
         "parameters": [
           {
@@ -1578,7 +1578,7 @@
           "Reports"
         ],
         "summary": "Retrieve a payment retry report",
-        "operationId": "GetReportRetryTransaction",
+        "operationId": "GetTransactionRetryReport",
         "description": "Retrieve a payment retry report\n",
         "parameters": [
           {
@@ -1639,7 +1639,7 @@
           "Reports"
         ],
         "summary": "Retrieve a statistics report",
-        "operationId": "GetReportStatistic",
+        "operationId": "GetStatisticReport",
         "description": "Retrieve a statistics report\n",
         "responses": {
           "200": {
@@ -1675,7 +1675,7 @@
           "Reports"
         ],
         "summary": "Retrieve transactions with their plan data",
-        "operationId": "GetReportSubscriptionCancellation",
+        "operationId": "GetSubscriptionCancellationReport",
         "description": "Retrieve transactions with their plan data",
         "parameters": [
           {
@@ -1784,7 +1784,7 @@
           "Reports"
         ],
         "summary": "Retrieve a list of subscription renewals data",
-        "operationId": "GetReportSubscriptionRenewalList",
+        "operationId": "GetSubscriptionRenewalListReport",
         "description": "Retrieve a list of subscription renewals data",
         "parameters": [
           {
@@ -1873,7 +1873,7 @@
           "Reports"
         ],
         "summary": "Retrieve a subscription renewal report",
-        "operationId": "GetReportSubscriptionRenewal",
+        "operationId": "GetSubscriptionRenewalReport",
         "description": "Retrieve a subscription renewal report",
         "parameters": [
           {
@@ -1944,7 +1944,7 @@
           "Reports"
         ],
         "summary": "Retrieve a time series transactions report",
-        "operationId": "GetReportTimeSeriesTransaction",
+        "operationId": "GetTimeSeriesTransactionReport",
         "description": "Retrieve a transactions report aggregated by time periods",
         "parameters": [
           {
@@ -2047,7 +2047,7 @@
           "Reports"
         ],
         "summary": "Retrieve transactions with their plan data",
-        "operationId": "GetReportTransactionPlan",
+        "operationId": "GetTransactionPlanReport",
         "description": "Retrieve transactions with their plan data",
         "parameters": [
           {
@@ -2136,7 +2136,7 @@
           "Reports"
         ],
         "summary": "Retrieve a dispute delays in days report",
-        "operationId": "GetReportTransactionTimeDispute",
+        "operationId": "GetTransactionTimeDisputeReport",
         "description": "Retrieve a dispute delays in days report, how much time between a transaction and a dispute.\n",
         "parameters": [
           {
@@ -2230,7 +2230,7 @@
           "Reports"
         ],
         "summary": "Retrieve a transactions report",
-        "operationId": "GetReportTransaction",
+        "operationId": "GetTransactionReport",
         "description": "Retrieve a transactions report",
         "parameters": [
           {
@@ -2335,7 +2335,7 @@
           "Subscriptions"
         ],
         "summary": "Retrieve subscription summary metrics",
-        "operationId": "GetSubscriptionSummaryMetric",
+        "operationId": "GetSubscriptionSummaryMetricReport",
         "description": "Retrieve subscription summary metrics\n",
         "parameters": [
           {
