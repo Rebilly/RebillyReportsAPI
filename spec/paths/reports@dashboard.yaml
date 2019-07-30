@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve dashboard data
-  operationId: GetReportDashboard
+  operationId: GetDashboardReport
   description: Retrieve dashboard data
   parameters:
     - name: periodStart

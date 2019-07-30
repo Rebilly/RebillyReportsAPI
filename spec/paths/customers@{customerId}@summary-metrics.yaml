@@ -2,7 +2,7 @@ get:
   tags:
     - Customers
   summary: Retrieve customer lifetime summary metrics
-  operationId: GetCustomerSummaryMetricCollection
+  operationId: GetCustomerSummaryMetricReport
   description: |
     Retrieve customer lifetime summary metrics
   parameters:

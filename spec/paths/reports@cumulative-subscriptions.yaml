@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a cumulative subscriptions report
-  operationId: GetReportCumulativeSubscription
+  operationId: GetCumulativeSubscriptionReport
   description: Retrieve a cumulative subscriptions report
   parameters:
     - name: aggregationField

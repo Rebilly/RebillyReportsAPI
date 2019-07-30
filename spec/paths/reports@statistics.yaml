@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a statistics report
-  operationId: GetReportStatistic
+  operationId: GetStatisticReport
   description: |
     Retrieve a statistics report
   responses:

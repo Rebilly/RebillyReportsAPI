@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a API Log Summary Report
-  operationId: GetReportApiLogSummary
+  operationId: GetApiLogSummaryReport
   description: Retrieve a API Log Summary Report
   parameters:
     - name: periodStart

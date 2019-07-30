@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a rules matched summary report
-  operationId: GetReportEventTriggeredRule
+  operationId: GetTriggeredEventRuleReport
   description: |
     Retrieve a rules matched summary report by events triggered.
   parameters:

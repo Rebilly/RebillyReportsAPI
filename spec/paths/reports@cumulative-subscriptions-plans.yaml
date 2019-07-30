@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a cumulative subscriptions plans report
-  operationId: GetReportCumulativeSubscriptionPlan
+  operationId: GetCumulativeSubscriptionPlanReport
   description: Retrieve a cumulative subscriptions report aggregated by day and plans
   parameters:
     - name: periodStart

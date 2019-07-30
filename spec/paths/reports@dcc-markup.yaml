@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a DCC markup report
-  operationId: GetReportDccMarkup
+  operationId: GetDccMarkupReport
   description: Retrieve a DCC markup report
   parameters:
     - name: aggregationField

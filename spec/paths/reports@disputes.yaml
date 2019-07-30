@@ -2,7 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a disputes report
-  operationId: GetReportDispute
+  operationId: GetDisputeReport
   description: |
     Retrieve a disputes report
   parameters:
