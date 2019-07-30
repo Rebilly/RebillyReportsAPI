@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a subscription renewal report
+  operationId: GetReportSubscriptionRenewal
   description: Retrieve a subscription renewal report
   parameters:
     - name: periodStart

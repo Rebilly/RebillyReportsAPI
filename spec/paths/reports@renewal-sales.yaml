@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a renewal sales report
+  operationId: GetReportRenewalSale
   description: |
     Retrieve a renewal sales report
   parameters:

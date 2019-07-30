@@ -2,6 +2,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve subscription summary metrics
+  operationId: GetSubscriptionSummaryMetric
   description: |
     Retrieve subscription summary metrics
   parameters:

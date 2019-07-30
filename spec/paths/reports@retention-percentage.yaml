@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a retention percentage report
+  operationId: GetReportRetentionPercentage
   description: |
     Retrieve a retention percentage report
   parameters:

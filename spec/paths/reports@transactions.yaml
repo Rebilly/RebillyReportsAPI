@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a transactions report
+  operationId: GetReportTransaction
   description: Retrieve a transactions report
   parameters:
     - name: periodStart

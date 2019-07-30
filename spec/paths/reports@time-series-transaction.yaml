@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a time series transactions report
+  operationId: GetReportTimeSeriesTransaction
   description: Retrieve a transactions report aggregated by time periods
   parameters:
     - name: type

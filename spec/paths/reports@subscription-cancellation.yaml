@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve transactions with their plan data
+  operationId: GetReportSubscriptionCancellation
   description: Retrieve transactions with their plan data
   parameters:
     - name: periodStart
