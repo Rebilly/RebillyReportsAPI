@@ -47,6 +47,7 @@ paths:
       tags:
         - Customers
       summary: Retrieve customer lifetime summary metrics
+      operationId: GetCustomerSummaryMetricReport
       description: |
         Retrieve customer lifetime summary metrics
       parameters:
@@ -77,6 +78,7 @@ paths:
       tags:
         - Data Exports
       summary: Request a data export of selected resource
+      operationId: PostDataExport
       description: |
         Request a data export of selected resource
       requestBody:
@@ -107,6 +109,7 @@ paths:
       tags:
         - Data Exports
       summary: Retrieve a list of data export requests
+      operationId: GetDataExportCollection
       description: |
         Retrieve a list of data export requests
       responses:
@@ -142,6 +145,7 @@ paths:
       tags:
         - Data Exports
       summary: Retrieve a data export request
+      operationId: GetDataExport
       description: |
         Retrieve a data export request
       responses:
@@ -172,6 +176,7 @@ paths:
       tags:
         - Data Exports
       summary: Modify a data export
+      operationId: PutDataExport
       description: |
         A data export may be changed as long as it is still pending
       requestBody:
@@ -215,6 +220,7 @@ paths:
       tags:
         - Data Exports
       summary: Delete a data export
+      operationId: DeleteDataExport
       description: |
         Delete an existing data export
       responses:
@@ -229,6 +235,7 @@ paths:
       tags:
         - Histograms
       summary: Get Transaction histogram report data
+      operationId: GetHistogramTransactionReport
       description: |
         Get Transaction histogram report data.
       parameters:
@@ -311,6 +318,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a report of payments successful retries throughput
+      operationId: GetPaymentSuccessByDeclineReasonReport
       description: Retrieve a report of payments successful retries throughput
       parameters:
         - name: periodStart
@@ -357,6 +365,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a API Log Summary Report
+      operationId: GetApiLogSummaryReport
       description: Retrieve a API Log Summary Report
       parameters:
         - name: periodStart
@@ -394,6 +403,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a cumulative subscriptions plans report
+      operationId: GetCumulativeSubscriptionPlanReport
       description: Retrieve a cumulative subscriptions report aggregated by day and plans
       parameters:
         - name: periodStart
@@ -450,6 +460,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a cumulative subscriptions report
+      operationId: GetCumulativeSubscriptionReport
       description: Retrieve a cumulative subscriptions report
       parameters:
         - name: aggregationField
@@ -497,6 +508,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve dashboard data
+      operationId: GetDashboardReport
       description: Retrieve dashboard data
       parameters:
         - name: periodStart
@@ -546,6 +558,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a DCC markup report
+      operationId: GetDccMarkupReport
       description: Retrieve a DCC markup report
       parameters:
         - name: aggregationField
@@ -603,6 +616,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a disputes report
+      operationId: GetDisputeReport
       description: |
         Retrieve a disputes report
       parameters:
@@ -658,6 +672,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a events triggered summary report
+      operationId: GetTriggeredEventReport
       description: |
         Retrieve a events triggered summary report.
       parameters:
@@ -702,6 +717,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a rules matched summary report
+      operationId: GetTriggeredEventRuleReport
       description: |
         Retrieve a rules matched summary report by events triggered.
       parameters:
@@ -762,6 +778,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a future renewals report
+      operationId: GetFutureRenewalReport
       description: Retrieve a future renewals report
       parameters:
         - name: periodStart
@@ -805,6 +822,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a renewal sales report
+      operationId: GetRenewalSaleReport
       description: |
         Retrieve a renewal sales report
       parameters:
@@ -849,6 +867,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a retention percentage report
+      operationId: GetRetentionPercentageReport
       description: |
         Retrieve a retention percentage report
       parameters:
@@ -925,6 +944,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a retention value report
+      operationId: GetRetentionValueReport
       description: |
         The retention value report shows the count of new customers
         per aggregation bucket and the corresponding per customer value over time.
@@ -1017,6 +1037,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a payment retry report
+      operationId: GetTransactionRetryReport
       description: |
         Retrieve a payment retry report
       parameters:
@@ -1056,6 +1077,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a statistics report
+      operationId: GetStatisticReport
       description: |
         Retrieve a statistics report
       responses:
@@ -1079,6 +1101,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve transactions with their plan data
+      operationId: GetSubscriptionCancellationReport
       description: Retrieve transactions with their plan data
       parameters:
         - name: periodStart
@@ -1150,6 +1173,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a list of subscription renewals data
+      operationId: GetSubscriptionRenewalListReport
       description: Retrieve a list of subscription renewals data
       parameters:
         - name: periodStart
@@ -1205,6 +1229,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a subscription renewal report
+      operationId: GetSubscriptionRenewalReport
       description: Retrieve a subscription renewal report
       parameters:
         - name: periodStart
@@ -1248,6 +1273,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a time series transactions report
+      operationId: GetTimeSeriesTransactionReport
       description: Retrieve a transactions report aggregated by time periods
       parameters:
         - name: type
@@ -1319,6 +1345,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve transactions with their plan data
+      operationId: GetTransactionPlanReport
       description: Retrieve transactions with their plan data
       parameters:
         - name: periodStart
@@ -1374,6 +1401,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a dispute delays in days report
+      operationId: GetTransactionTimeDisputeReport
       description: |
         Retrieve a dispute delays in days report, how much time between a transaction and a dispute.
       parameters:
@@ -1435,6 +1463,7 @@ paths:
       tags:
         - Reports
       summary: Retrieve a transactions report
+      operationId: GetTransactionReport
       description: Retrieve a transactions report
       parameters:
         - name: periodStart
@@ -1506,6 +1535,7 @@ paths:
       tags:
         - Subscriptions
       summary: Retrieve subscription summary metrics
+      operationId: GetSubscriptionSummaryMetricReport
       description: |
         Retrieve subscription summary metrics
       parameters:
