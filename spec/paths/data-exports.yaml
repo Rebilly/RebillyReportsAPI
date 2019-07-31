@@ -2,6 +2,7 @@ post:
   tags:
     - Data Exports
   summary: Request a data export of selected resource
+  operationId: PostDataExport
   description: |
     Request a data export of selected resource
   requestBody:
@@ -32,6 +33,7 @@ get:
   tags:
     - Data Exports
   summary: Retrieve a list of data export requests
+  operationId: GetDataExportCollection
   description: |
     Retrieve a list of data export requests
   responses:

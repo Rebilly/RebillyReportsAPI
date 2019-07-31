@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a events triggered summary report
+  operationId: GetTriggeredEventReport
   description: |
     Retrieve a events triggered summary report.
   parameters:

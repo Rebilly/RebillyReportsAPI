@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a payment retry report
+  operationId: GetTransactionRetryReport
   description: |
     Retrieve a payment retry report
   parameters:

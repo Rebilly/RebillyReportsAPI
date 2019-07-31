@@ -4,6 +4,7 @@ get:
   tags:
     - Data Exports
   summary: Retrieve a data export request
+  operationId: GetDataExport
   description: |
     Retrieve a data export request
   responses:
@@ -34,6 +35,7 @@ put:
   tags:
     - Data Exports
   summary: Modify a data export
+  operationId: PutDataExport
   description: |
     A data export may be changed as long as it is still pending
   requestBody:
@@ -77,6 +79,7 @@ delete:
   tags:
     - Data Exports
   summary: Delete a data export
+  operationId: DeleteDataExport
   description: |
     Delete an existing data export
   responses:

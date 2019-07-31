@@ -2,6 +2,7 @@ get:
   tags:
     - Histograms
   summary: Get Transaction histogram report data
+  operationId: GetHistogramTransactionReport
   description: |
     Get Transaction histogram report data.
   parameters:

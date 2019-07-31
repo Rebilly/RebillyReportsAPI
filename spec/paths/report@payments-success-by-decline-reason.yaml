@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a report of payments successful retries throughput
+  operationId: GetPaymentSuccessByDeclineReasonReport
   description: Retrieve a report of payments successful retries throughput
   parameters:
     - name: periodStart

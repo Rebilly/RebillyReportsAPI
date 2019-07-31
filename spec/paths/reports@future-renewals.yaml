@@ -2,6 +2,7 @@ get:
   tags:
     - Reports
   summary: Retrieve a future renewals report
+  operationId: GetFutureRenewalReport
   description: Retrieve a future renewals report
   parameters:
     - name: periodStart
