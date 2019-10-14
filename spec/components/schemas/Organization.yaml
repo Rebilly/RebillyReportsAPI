@@ -1,0 +1,16 @@
+type: object
+required:
+  - name
+  - website
+properties:
+  name:
+    description: The organization name
+    type: string
+  website:
+    description: The organization website address
+    type: string
+  reportingCurrency:
+    description: The currency to be set only once which will be used for conversion in reports
+    type: string
+    pattern: "^[A-Z]{3}$"
+    default: USD

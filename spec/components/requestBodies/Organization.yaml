@@ -1,0 +1,6 @@
+content:
+  application/json:
+    schema:
+      $ref: "#/components/schemas/Organization"
+description: Create Organization Request
+required: true
