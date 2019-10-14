@@ -313,6 +313,34 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HistogramData'
+  /organizations:
+    post:
+      tags:
+        - Organizations
+      summary: Create an organization
+      operationId: PostOrganization
+      description: |
+        Create an organization
+      requestBody:
+        $ref: '#/components/requestBodies/Organization'
+      responses:
+        '201':
+          description: Organization was created
+          headers:
+            Rate-Limit-Limit:
+              $ref: '#/components/headers/Rate-Limit-Limit'
+            Rate-Limit-Remaining:
+              $ref: '#/components/headers/Rate-Limit-Remaining'
+            Rate-Limit-Reset:
+              $ref: '#/components/headers/Rate-Limit-Reset'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Organization'
+        '401':
+          $ref: '#/components/responses/AccessForbidden'
+        '422':
+          $ref: '#/components/responses/InvalidDataError'
   /report/payments-success-by-decline-reason:
     get:
       tags:
@@ -2078,6 +2106,23 @@ components:
             - user
       required:
         - rel
+    Organization:
+      type: object
+      required:
+        - name
+        - website
+      properties:
+        name:
+          description: The organization name
+          type: string
+        website:
+          description: The organization website address
+          type: string
+        reportingCurrency:
+          description: The currency to be set only once which will be used for conversion in reports
+          type: string
+          pattern: '^[A-Z]{3}$'
+          default: USD
     RenewalSales:
       type: object
       properties:
@@ -2894,6 +2939,13 @@ components:
           schema:
             $ref: '#/components/schemas/DataExport'
       description: Data Export Request
+      required: true
+    Organization:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Organization'
+      description: Create Organization Request
       required: true
   securitySchemes:
     ApiKey:
