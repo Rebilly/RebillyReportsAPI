@@ -8,7 +8,6 @@ content:
         name:
           description: The organization name
           type: string
-          required: true
         website:
           description: The organization website address
           type: string
