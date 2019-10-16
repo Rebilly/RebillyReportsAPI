@@ -13,7 +13,7 @@ content:
           description: The organization website address
           type: string
         reportingCurrency:
-          description: The currency to be set only once which will be used for conversion in reports
+          description: The currency used for reports. It can only be set upon organization creation.
           type: string
           pattern: "^[A-Z]{3}$"
           default: USD
