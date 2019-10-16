@@ -2112,14 +2112,36 @@ components:
         - name
         - website
       properties:
+        id:
+          description: The Organization identifier string
+          readOnly: true
+          allOf:
+            - $ref: '#/components/schemas/ResourceId'
         name:
           description: The organization name
           type: string
-        website:
-          description: The organization website address
+        email:
+          description: The merchant email
           type: string
-        reportingCurrency:
-          description: The currency used for reports.  It can only be set upon organization creation.
+          format: email
+          maxLength: 100
+        status:
+          description: The merchant status
+          type: string
+          enum:
+            - active
+            - inactive
+            - pending-confirmation
+          readOnly: true
+        lastName:
+          description: The merchant user's last name
+          type: string
+        firstName:
+          description: The merchant user's first name
+          type: string
+        reportCurrency:
+          description: The currency used for reports. It can only be set upon organization creation.
+          readOnly: true
           type: string
           pattern: '^[A-Z]{3}$'
           default: USD
@@ -2944,9 +2966,22 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Organization'
+            required:
+              - name
+              - website
+            properties:
+              name:
+                description: The organization name
+                type: string
+              website:
+                description: The organization website address
+                type: string
+              reportingCurrency:
+                description: The currency used for reports. It can only be set upon organization creation.
+                type: string
+                pattern: '^[A-Z]{3}$'
+                default: USD
       description: Create Organization Request
-      required: true
   securitySchemes:
     ApiKey:
       description: |
