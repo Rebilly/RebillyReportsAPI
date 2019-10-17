@@ -3196,13 +3196,13 @@
             "type": "string"
           },
           "email": {
-            "description": "The merchant email",
+            "description": "The organization email",
             "type": "string",
             "format": "email",
             "maxLength": 100
           },
           "status": {
-            "description": "The merchant status",
+            "description": "The organization status",
             "type": "string",
             "enum": [
               "active",
@@ -3212,11 +3212,11 @@
             "readOnly": true
           },
           "lastName": {
-            "description": "The merchant user's last name",
+            "description": "The organization user's last name",
             "type": "string"
           },
           "firstName": {
-            "description": "The merchant user's first name",
+            "description": "The organization user's first name",
             "type": "string"
           },
           "reportCurrency": {
