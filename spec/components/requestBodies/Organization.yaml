@@ -1,0 +1,19 @@
+content:
+  application/json:
+    schema:
+      required:
+        - name
+        - website
+      properties:
+        name:
+          description: The organization name
+          type: string
+        website:
+          description: The organization website address
+          type: string
+        reportingCurrency:
+          description: The currency used for reports. It can only be set upon organization creation.
+          type: string
+          pattern: "^[A-Z]{3}$"
+          default: USD
+description: Create Organization Request
