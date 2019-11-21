@@ -3042,7 +3042,6 @@ components:
             required:
               - name
               - website
-              - country
             properties:
               name:
                 description: The organization name
@@ -3050,6 +3049,7 @@ components:
               website:
                 description: The organization website address
                 type: string
+                format: url
               address:
                 description: The organization street address
                 type: string

@@ -4467,8 +4467,7 @@
             "schema": {
               "required": [
                 "name",
-                "website",
-                "country"
+                "website"
               ],
               "properties": {
                 "name": {
@@ -4477,7 +4476,8 @@
                 },
                 "website": {
                   "description": "The organization website address",
-                  "type": "string"
+                  "type": "string",
+                  "format": "url"
                 },
                 "address": {
                   "description": "The organization street address",
