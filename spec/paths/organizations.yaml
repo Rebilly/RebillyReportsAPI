@@ -1,4 +1,5 @@
 post:
+  deprecated: true
   tags:
     - Organizations
   summary: Create an organization
