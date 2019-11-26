@@ -25,12 +25,6 @@ properties:
       - "inactive"
       - "pending-confirmation"
     readOnly: true
-  lastName:
-    description: The organization user's last name
-    type: string
-  firstName:
-    description: The organization user's first name
-    type: string
   address:
     description: The organization street address
     type: string
@@ -67,7 +61,7 @@ properties:
     description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
     type: string
     maxLength: 50
-  reportCurrency:
+  reportingCurrency:
     description: The currency used for reports. It can only be set upon organization creation.
     readOnly: true
     type: string
