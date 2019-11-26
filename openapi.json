@@ -455,6 +455,7 @@
     },
     "/organizations": {
       "post": {
+        "deprecated": true,
         "tags": [
           "Organizations"
         ],

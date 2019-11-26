@@ -315,6 +315,7 @@ paths:
                 $ref: '#/components/schemas/HistogramData'
   /organizations:
     post:
+      deprecated: true
       tags:
         - Organizations
       summary: Create an organization
