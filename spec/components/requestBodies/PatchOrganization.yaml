@@ -1,15 +1,12 @@
 content:
   application/json:
     schema:
-      required:
-        - name
-        - website
       properties:
         name:
           description: The organization name
           type: string
         website:
-          description: The organization website address
+          description: The organization website address (required for create operation and not used for update)
           type: string
           format: url
         address:

@@ -3,12 +3,14 @@ content:
     schema:
       required:
         - name
+        - website
+        - country
       properties:
         name:
           description: The organization name
           type: string
         website:
-          description: The organization website address (required for create operation and not used for update)
+          description: The organization website address
           type: string
           format: url
         address:

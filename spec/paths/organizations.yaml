@@ -7,7 +7,7 @@ post:
   description: |
     Create an organization
   requestBody:
-    $ref: '#/components/requestBodies/Organization'
+    $ref: '#/components/requestBodies/PostOrganization'
   responses:
     201:
       description: Organization was created
