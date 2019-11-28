@@ -6,6 +6,8 @@ post:
   operationId: PostOrganization
   description: |
     Create an organization
+  security:
+    - JWT: []
   requestBody:
     $ref: '#/components/requestBodies/PostOrganization'
   responses:

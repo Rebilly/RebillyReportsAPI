@@ -8,6 +8,8 @@ patch:
   operationId: PutOrganization
   description: |
     Update an organization with predefined identifier string
+  security:
+    - JWT: []
   requestBody:
     $ref: '#/components/requestBodies/PatchOrganization'
   responses:
