@@ -322,6 +322,8 @@ paths:
       operationId: PostOrganization
       description: |
         Create an organization
+      security:
+        - JWT: []
       requestBody:
         $ref: '#/components/requestBodies/PostOrganization'
       responses:
@@ -353,6 +355,8 @@ paths:
       operationId: PutOrganization
       description: |
         Update an organization with predefined identifier string
+      security:
+        - JWT: []
       requestBody:
         $ref: '#/components/requestBodies/PatchOrganization'
       responses:
@@ -3101,11 +3105,6 @@ components:
                 description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
                 type: string
                 maxLength: 50
-              reportCurrency:
-                description: The currency used for reports. It can only be set upon organization creation.
-                type: string
-                pattern: '^[A-Z]{3}$'
-                default: USD
       description: Create Organization Request
     PostOrganization:
       content:
