@@ -3247,11 +3247,6 @@
       },
       "Organization": {
         "type": "object",
-        "required": [
-          "name",
-          "website",
-          "country"
-        ],
         "properties": {
           "id": {
             "description": "The Organization identifier string",
