@@ -463,7 +463,7 @@
         "operationId": "PostOrganization",
         "description": "Create an organization\n",
         "requestBody": {
-          "$ref": "#/components/requestBodies/Organization"
+          "$ref": "#/components/requestBodies/PostOrganization"
         },
         "responses": {
           "201": {
@@ -502,41 +502,20 @@
           "$ref": "#/components/parameters/resourceId"
         }
       ],
-      "put": {
+      "patch": {
         "deprecated": true,
         "tags": [
           "Organizations"
         ],
-        "summary": "Create or update an organization with predefined ID",
+        "summary": "Update an organization",
         "operationId": "PutOrganization",
-        "description": "Create or update an organization with predefined identifier string\n",
+        "description": "Update an organization with predefined identifier string\n",
         "requestBody": {
-          "$ref": "#/components/requestBodies/PutOrganization"
+          "$ref": "#/components/requestBodies/PatchOrganization"
         },
         "responses": {
           "200": {
             "description": "Organization was updated",
-            "headers": {
-              "Rate-Limit-Limit": {
-                "$ref": "#/components/headers/Rate-Limit-Limit"
-              },
-              "Rate-Limit-Remaining": {
-                "$ref": "#/components/headers/Rate-Limit-Remaining"
-              },
-              "Rate-Limit-Reset": {
-                "$ref": "#/components/headers/Rate-Limit-Reset"
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Organization"
-                }
-              }
-            }
-          },
-          "201": {
-            "description": "Organization was created",
             "headers": {
               "Rate-Limit-Limit": {
                 "$ref": "#/components/headers/Rate-Limit-Limit"
@@ -4518,21 +4497,17 @@
         "description": "Data Export Request",
         "required": true
       },
-      "Organization": {
+      "PatchOrganization": {
         "content": {
           "application/json": {
             "schema": {
-              "required": [
-                "name",
-                "website"
-              ],
               "properties": {
                 "name": {
                   "description": "The organization name",
                   "type": "string"
                 },
                 "website": {
-                  "description": "The organization website address",
+                  "description": "The organization website address (required for create operation and not used for update)",
                   "type": "string",
                   "format": "url"
                 },
@@ -4594,12 +4569,14 @@
         },
         "description": "Create Organization Request"
       },
-      "PutOrganization": {
+      "PostOrganization": {
         "content": {
           "application/json": {
             "schema": {
               "required": [
-                "name"
+                "name",
+                "website",
+                "country"
               ],
               "properties": {
                 "name": {
@@ -4607,7 +4584,7 @@
                   "type": "string"
                 },
                 "website": {
-                  "description": "The organization website address (required for create operation and not used for update)",
+                  "description": "The organization website address",
                   "type": "string",
                   "format": "url"
                 },
