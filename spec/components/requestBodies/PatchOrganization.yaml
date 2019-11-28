@@ -5,10 +5,6 @@ content:
         name:
           description: The organization name
           type: string
-        website:
-          description: The organization website address (required for create operation and not used for update)
-          type: string
-          format: url
         address:
           description: The organization street address
           type: string
