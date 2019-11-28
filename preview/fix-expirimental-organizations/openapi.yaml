@@ -2215,7 +2215,7 @@ components:
           description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
           type: string
           maxLength: 50
-        reportingCurrency:
+        reportCurrency:
           description: The currency used for reports. It can only be set upon organization creation.
           readOnly: true
           type: string
@@ -3125,7 +3125,7 @@ components:
                 description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
                 type: string
                 maxLength: 50
-              reportingCurrency:
+              reportCurrency:
                 description: The currency used for reports. It can only be set upon organization creation.
                 type: string
                 pattern: '^[A-Z]{3}$'
@@ -3181,7 +3181,7 @@ components:
                 description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
                 type: string
                 maxLength: 50
-              reportingCurrency:
+              reportCurrency:
                 description: The currency used for reports. It can only be set upon organization creation.
                 type: string
                 pattern: '^[A-Z]{3}$'

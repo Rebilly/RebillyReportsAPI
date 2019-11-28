@@ -3328,7 +3328,7 @@
             "type": "string",
             "maxLength": 50
           },
-          "reportingCurrency": {
+          "reportCurrency": {
             "description": "The currency used for reports. It can only be set upon organization creation.",
             "readOnly": true,
             "type": "string",
@@ -4587,7 +4587,7 @@
                   "type": "string",
                   "maxLength": 50
                 },
-                "reportingCurrency": {
+                "reportCurrency": {
                   "description": "The currency used for reports. It can only be set upon organization creation.",
                   "type": "string",
                   "pattern": "^[A-Z]{3}$",
@@ -4662,7 +4662,7 @@
                   "type": "string",
                   "maxLength": 50
                 },
-                "reportingCurrency": {
+                "reportCurrency": {
                   "description": "The currency used for reports. It can only be set upon organization creation.",
                   "type": "string",
                   "pattern": "^[A-Z]{3}$",
