@@ -2151,7 +2151,7 @@ components:
           allOf:
             - $ref: '#/components/schemas/ResourceId'
         name:
-          description: The organization name
+          description: The organization unique name
           type: string
         email:
           description: The organization email
@@ -3067,7 +3067,7 @@ components:
           schema:
             properties:
               name:
-                description: The organization name
+                description: The organization unique name
                 type: string
               address:
                 description: The organization street address
@@ -3116,7 +3116,7 @@ components:
               - country
             properties:
               name:
-                description: The organization name
+                description: The organization unique name
                 type: string
               website:
                 description: The organization website address

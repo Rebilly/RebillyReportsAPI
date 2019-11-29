@@ -3247,7 +3247,7 @@
             ]
           },
           "name": {
-            "description": "The organization name",
+            "description": "The organization unique name",
             "type": "string"
           },
           "email": {
@@ -4513,7 +4513,7 @@
             "schema": {
               "properties": {
                 "name": {
-                  "description": "The organization name",
+                  "description": "The organization unique name",
                   "type": "string"
                 },
                 "address": {
@@ -4579,7 +4579,7 @@
               ],
               "properties": {
                 "name": {
-                  "description": "The organization name",
+                  "description": "The organization unique name",
                   "type": "string"
                 },
                 "website": {
