@@ -3,7 +3,7 @@ content:
     schema:
       properties:
         name:
-          description: The organization name
+          description: The organization unique name
           type: string
         address:
           description: The organization street address

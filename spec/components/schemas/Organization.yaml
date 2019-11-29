@@ -6,7 +6,7 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   name:
-    description: The organization name
+    description: The organization unique name
     type: string
   email:
     description: The organization email

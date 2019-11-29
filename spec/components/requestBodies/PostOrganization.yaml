@@ -7,7 +7,7 @@ content:
         - country
       properties:
         name:
-          description: The organization name
+          description: The organization unique name
           type: string
         website:
           description: The organization website address
