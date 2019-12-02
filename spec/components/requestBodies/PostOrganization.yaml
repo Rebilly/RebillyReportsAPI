@@ -5,6 +5,7 @@ content:
         - name
         - website
         - country
+        - reportCurrency
       properties:
         name:
           description: The organization unique name
@@ -53,5 +54,4 @@ content:
           description: The currency used for reports. It can only be set upon organization creation.
           type: string
           pattern: "^[A-Z]{3}$"
-          default: USD
 description: Create Organization Request

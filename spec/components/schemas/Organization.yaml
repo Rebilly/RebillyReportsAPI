@@ -62,4 +62,3 @@ properties:
     readOnly: true
     type: string
     pattern: "^[A-Z]{3}$"
-    default: USD
