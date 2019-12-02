@@ -2151,7 +2151,7 @@ components:
           allOf:
             - $ref: '#/components/schemas/ResourceId'
         name:
-          description: The organization unique name
+          description: The organization name.  It must be unique globally within Rebilly.
           type: string
         email:
           description: The organization email
@@ -3067,7 +3067,7 @@ components:
           schema:
             properties:
               name:
-                description: The organization unique name
+                description: The organization name.  It must be globally unique within Rebilly.
                 type: string
               address:
                 description: The organization street address
