@@ -4579,7 +4579,7 @@
               ],
               "properties": {
                 "name": {
-                  "description": "The organization unique name",
+                  "description": "The organization name.  It must be globally unique within Rebilly.",
                   "type": "string"
                 },
                 "website": {
