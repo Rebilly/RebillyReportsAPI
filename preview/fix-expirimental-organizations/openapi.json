@@ -3316,8 +3316,7 @@
             "description": "The currency used for reports. It can only be set upon organization creation.",
             "readOnly": true,
             "type": "string",
-            "pattern": "^[A-Z]{3}$",
-            "default": "USD"
+            "pattern": "^[A-Z]{3}$"
           }
         }
       },
@@ -4575,7 +4574,8 @@
               "required": [
                 "name",
                 "website",
-                "country"
+                "country",
+                "reportCurrency"
               ],
               "properties": {
                 "name": {
@@ -4636,8 +4636,7 @@
                 "reportCurrency": {
                   "description": "The currency used for reports. It can only be set upon organization creation.",
                   "type": "string",
-                  "pattern": "^[A-Z]{3}$",
-                  "default": "USD"
+                  "pattern": "^[A-Z]{3}$"
                 }
               }
             }
