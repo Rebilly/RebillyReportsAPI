@@ -5,7 +5,7 @@ patch:
   tags:
     - Organizations
   summary: Update an organization
-  operationId: PutOrganization
+  operationId: PatchOrganization
   description: |
     Update an organization with predefined identifier string
   security:
