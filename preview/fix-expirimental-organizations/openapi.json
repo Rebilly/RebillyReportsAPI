@@ -3247,7 +3247,7 @@
             ]
           },
           "name": {
-            "description": "The organization name.  It must be unique globally within Rebilly.",
+            "description": "The organization name. It must be unique globally within Rebilly.",
             "type": "string"
           },
           "email": {
@@ -4512,7 +4512,7 @@
             "schema": {
               "properties": {
                 "name": {
-                  "description": "The organization name.  It must be globally unique within Rebilly.",
+                  "description": "The organization name. It must be globally unique within Rebilly.",
                   "type": "string"
                 },
                 "address": {
@@ -4579,7 +4579,7 @@
               ],
               "properties": {
                 "name": {
-                  "description": "The organization name.  It must be globally unique within Rebilly.",
+                  "description": "The organization name. It must be globally unique within Rebilly.",
                   "type": "string"
                 },
                 "website": {
