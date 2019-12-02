@@ -8,7 +8,7 @@ content:
         - reportCurrency
       properties:
         name:
-          description: The organization name.  It must be globally unique within Rebilly.
+          description: The organization name. It must be globally unique within Rebilly.
           type: string
         website:
           description: The organization website address
