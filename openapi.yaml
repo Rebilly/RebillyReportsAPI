@@ -322,8 +322,10 @@ paths:
       operationId: PostOrganization
       description: |
         Create an organization
+      security:
+        - JWT: []
       requestBody:
-        $ref: '#/components/requestBodies/Organization'
+        $ref: '#/components/requestBodies/PostOrganization'
       responses:
         '201':
           description: Organization was created
@@ -345,32 +347,21 @@ paths:
   '/organizations/{id}':
     parameters:
       - $ref: '#/components/parameters/resourceId'
-    put:
+    patch:
       deprecated: true
       tags:
         - Organizations
-      summary: Create or update an organization with predefined ID
-      operationId: PutOrganization
+      summary: Update an organization
+      operationId: PatchOrganization
       description: |
-        Create or update an organization with predefined identifier string
+        Update an organization with predefined identifier string
+      security:
+        - JWT: []
       requestBody:
-        $ref: '#/components/requestBodies/PutOrganization'
+        $ref: '#/components/requestBodies/PatchOrganization'
       responses:
         '200':
           description: Organization was updated
-          headers:
-            Rate-Limit-Limit:
-              $ref: '#/components/headers/Rate-Limit-Limit'
-            Rate-Limit-Remaining:
-              $ref: '#/components/headers/Rate-Limit-Remaining'
-            Rate-Limit-Reset:
-              $ref: '#/components/headers/Rate-Limit-Reset'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Organization'
-        '201':
-          description: Organization was created
           headers:
             Rate-Limit-Limit:
               $ref: '#/components/headers/Rate-Limit-Limit'
@@ -2153,10 +2144,6 @@ components:
         - rel
     Organization:
       type: object
-      required:
-        - name
-        - website
-        - country
       properties:
         id:
           description: The Organization identifier string
@@ -2164,7 +2151,7 @@ components:
           allOf:
             - $ref: '#/components/schemas/ResourceId'
         name:
-          description: The organization name
+          description: The organization name. It must be unique globally within Rebilly.
           type: string
         email:
           description: The organization email
@@ -2215,12 +2202,11 @@ components:
           description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
           type: string
           maxLength: 50
-        reportingCurrency:
+        reportCurrency:
           description: The currency used for reports. It can only be set upon organization creation.
           readOnly: true
           type: string
           pattern: '^[A-Z]{3}$'
-          default: USD
     ContactEmails:
       description: The list of emails
       type: array
@@ -3074,16 +3060,63 @@ components:
             $ref: '#/components/schemas/DataExport'
       description: Data Export Request
       required: true
-    Organization:
+    PatchOrganization:
+      content:
+        application/json:
+          schema:
+            properties:
+              name:
+                description: The organization name. It must be globally unique within Rebilly.
+                type: string
+              address:
+                description: The organization street address
+                type: string
+                maxLength: 60
+              address2:
+                description: The organization street address
+                type: string
+                maxLength: 60
+              city:
+                description: The organization city
+                type: string
+                maxLength: 45
+              region:
+                description: The organization region (state)
+                type: string
+                maxLength: 45
+              country:
+                description: The organization country ISO Alpha-2 code
+                type: string
+                pattern: '^[A-Z]{2}$'
+              postalCode:
+                description: The organization postal code
+                type: string
+                maxLength: 10
+              phoneNumbers:
+                $ref: '#/components/schemas/ContactPhoneNumbers'
+              emails:
+                $ref: '#/components/schemas/ContactEmails'
+              taxDescriptor:
+                description: The organization's tax label. This will be displayed on the invoice.
+                type: string
+                maxLength: 255
+              invoiceTimeZone:
+                description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
+                type: string
+                maxLength: 50
+      description: Create Organization Request
+    PostOrganization:
       content:
         application/json:
           schema:
             required:
               - name
               - website
+              - country
+              - reportCurrency
             properties:
               name:
-                description: The organization name
+                description: The organization name. It must be globally unique within Rebilly.
                 type: string
               website:
                 description: The organization website address
@@ -3125,67 +3158,10 @@ components:
                 description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
                 type: string
                 maxLength: 50
-              reportingCurrency:
+              reportCurrency:
                 description: The currency used for reports. It can only be set upon organization creation.
                 type: string
                 pattern: '^[A-Z]{3}$'
-                default: USD
-      description: Create Organization Request
-    PutOrganization:
-      content:
-        application/json:
-          schema:
-            required:
-              - name
-            properties:
-              name:
-                description: The organization name
-                type: string
-              website:
-                description: The organization website address (required for create operation and not used for update)
-                type: string
-                format: url
-              address:
-                description: The organization street address
-                type: string
-                maxLength: 60
-              address2:
-                description: The organization street address
-                type: string
-                maxLength: 60
-              city:
-                description: The organization city
-                type: string
-                maxLength: 45
-              region:
-                description: The organization region (state)
-                type: string
-                maxLength: 45
-              country:
-                description: The organization country ISO Alpha-2 code
-                type: string
-                pattern: '^[A-Z]{2}$'
-              postalCode:
-                description: The organization postal code
-                type: string
-                maxLength: 10
-              phoneNumbers:
-                $ref: '#/components/schemas/ContactPhoneNumbers'
-              emails:
-                $ref: '#/components/schemas/ContactEmails'
-              taxDescriptor:
-                description: The organization's tax label. This will be displayed on the invoice.
-                type: string
-                maxLength: 255
-              invoiceTimeZone:
-                description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
-                type: string
-                maxLength: 50
-              reportingCurrency:
-                description: The currency used for reports. It can only be set upon organization creation.
-                type: string
-                pattern: '^[A-Z]{3}$'
-                default: USD
       description: Create Organization Request
   securitySchemes:
     ApiKey:
