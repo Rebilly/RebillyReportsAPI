@@ -1,16 +1,10 @@
 content:
   application/json:
     schema:
-      required:
-        - name
       properties:
         name:
-          description: The organization name
+          description: The organization name. It must be globally unique within Rebilly.
           type: string
-        website:
-          description: The organization website address (required for create operation and not used for update)
-          type: string
-          format: url
         address:
           description: The organization street address
           type: string
@@ -47,9 +41,4 @@ content:
           description: Invoice will use this time zone to display time otherwise UTC will be used. Example "America/New_York"
           type: string
           maxLength: 50
-        reportingCurrency:
-          description: The currency used for reports. It can only be set upon organization creation.
-          type: string
-          pattern: "^[A-Z]{3}$"
-          default: USD
 description: Create Organization Request

@@ -1,31 +1,20 @@
 parameters:
   - $ref: '#/components/parameters/resourceId'
-put:
+patch:
   deprecated: true
   tags:
     - Organizations
-  summary: Create or update an organization with predefined ID
-  operationId: PutOrganization
+  summary: Update an organization
+  operationId: PatchOrganization
   description: |
-    Create or update an organization with predefined identifier string
+    Update an organization with predefined identifier string
+  security:
+    - JWT: []
   requestBody:
-    $ref: '#/components/requestBodies/PutOrganization'
+    $ref: '#/components/requestBodies/PatchOrganization'
   responses:
     200:
       description: Organization was updated
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/components/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/components/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/components/headers/Rate-Limit-Reset"
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Organization'
-    201:
-      description: Organization was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
