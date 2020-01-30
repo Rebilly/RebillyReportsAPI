@@ -1,7 +1,0 @@
-name: eventTypes
-in: query
-description: The event types
-schema:
-  type: array
-  items:
-    type: string

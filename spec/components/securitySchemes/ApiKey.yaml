@@ -1,8 +1,0 @@
-description: |
-  When you sign up for an account, you are given your first API key.
-  To do so please follow this link: https://www.rebilly.com/site/signup/
-  Also you can generate additional API keys, and delete API keys (as you may
-  need to rotate your keys in the future).
-name: REB-APIKEY
-type: apiKey
-in: header
