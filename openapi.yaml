@@ -43,6 +43,8 @@ servers:
   - url: 'https://api.rebilly.com/experimental'
 paths:
   '/customers/{customerId}/summary-metrics':
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Customers
@@ -74,6 +76,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /data-exports:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     post:
       tags:
         - Data Exports
@@ -141,6 +145,7 @@ paths:
   '/data-exports/{id}':
     parameters:
       - $ref: '#/components/parameters/resourceId'
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Data Exports
@@ -231,6 +236,8 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
   /histograms/transactions:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Histograms
@@ -378,6 +385,8 @@ paths:
         '422':
           $ref: '#/components/responses/InvalidDataError'
   /report/payments-success-by-decline-reason:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -425,6 +434,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/api-log-summary:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -463,6 +474,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/cumulative-subscriptions-plans:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -520,6 +533,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/cumulative-subscriptions:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -568,6 +583,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/dashboard:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -618,6 +635,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/dcc-markup:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -676,6 +695,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/disputes:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -732,6 +753,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/events-triggered:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -777,6 +800,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   '/reports/events-triggered/{eventType}/rules':
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -838,6 +863,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/future-renewals:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -882,6 +909,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/renewal-sales:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -927,6 +956,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/retention-percentage:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1004,6 +1035,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/retention-value:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1097,6 +1130,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/retry-transaction:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1137,6 +1172,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/statistics:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1161,6 +1198,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/subscription-cancellation:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1233,6 +1272,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/subscription-renewal-list:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1289,6 +1330,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/subscription-renewal:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1333,6 +1376,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/time-series-transaction:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1405,6 +1450,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/transactions-plan:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1461,6 +1508,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/transactions-time-dispute:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1523,6 +1572,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   /reports/transactions:
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Reports
@@ -1595,6 +1646,8 @@ paths:
         '401':
           $ref: '#/components/responses/AccessForbidden'
   '/subscriptions/{subscriptionId}/summary-metrics':
+    parameters:
+      - $ref: '#/components/parameters/organizationId'
     get:
       tags:
         - Subscriptions
@@ -3008,6 +3061,13 @@ components:
           - text/csv
           - application/pdf
         default: application/json
+    organizationId:
+      name: Organization-Id
+      in: header
+      description: 'Organization identifier in scope of which need to perform request (if not specified, the default organization will be used)'
+      schema:
+        $ref: '#/components/schemas/ResourceId'
+      required: false
     reportTimezone:
       name: tz
       in: query

@@ -56,6 +56,11 @@
   ],
   "paths": {
     "/customers/{customerId}/summary-metrics": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Customers"
@@ -103,6 +108,11 @@
       }
     },
     "/data-exports": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "post": {
         "tags": [
           "Data Exports"
@@ -204,6 +214,9 @@
       "parameters": [
         {
           "$ref": "#/components/parameters/resourceId"
+        },
+        {
+          "$ref": "#/components/parameters/organizationId"
         }
       ],
       "get": {
@@ -341,6 +354,11 @@
       }
     },
     "/histograms/transactions": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Histograms"
@@ -555,6 +573,11 @@
       }
     },
     "/report/payments-success-by-decline-reason": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -631,6 +654,11 @@
       }
     },
     "/reports/api-log-summary": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -693,6 +721,11 @@
       }
     },
     "/reports/cumulative-subscriptions-plans": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -785,6 +818,11 @@
       }
     },
     "/reports/cumulative-subscriptions": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -863,6 +901,11 @@
       }
     },
     "/reports/dashboard": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -941,6 +984,11 @@
       }
     },
     "/reports/dcc-markup": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1032,6 +1080,11 @@
       }
     },
     "/reports/disputes": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1117,6 +1170,11 @@
       }
     },
     "/reports/events-triggered": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1188,6 +1246,11 @@
       }
     },
     "/reports/events-triggered/{eventType}/rules": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1279,6 +1342,11 @@
       }
     },
     "/reports/future-renewals": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1350,6 +1418,11 @@
       }
     },
     "/reports/renewal-sales": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1421,6 +1494,11 @@
       }
     },
     "/reports/retention-percentage": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1538,6 +1616,11 @@
       }
     },
     "/reports/retention-value": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1674,6 +1757,11 @@
       }
     },
     "/reports/retry-transaction": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1735,6 +1823,11 @@
       }
     },
     "/reports/statistics": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1771,6 +1864,11 @@
       }
     },
     "/reports/subscription-cancellation": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1880,6 +1978,11 @@
       }
     },
     "/reports/subscription-renewal-list": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -1969,6 +2072,11 @@
       }
     },
     "/reports/subscription-renewal": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -2040,6 +2148,11 @@
       }
     },
     "/reports/time-series-transaction": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -2143,6 +2256,11 @@
       }
     },
     "/reports/transactions-plan": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -2232,6 +2350,11 @@
       }
     },
     "/reports/transactions-time-dispute": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -2326,6 +2449,11 @@
       }
     },
     "/reports/transactions": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Reports"
@@ -2431,6 +2559,11 @@
       }
     },
     "/subscriptions/{subscriptionId}/summary-metrics": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/organizationId"
+        }
+      ],
       "get": {
         "tags": [
           "Subscriptions"
@@ -4433,6 +4566,15 @@
           ],
           "default": "application/json"
         }
+      },
+      "organizationId": {
+        "name": "Organization-Id",
+        "in": "header",
+        "description": "Organization identifier in scope of which need to perform request (if not specified, the default organization will be used)",
+        "schema": {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        "required": false
       },
       "reportTimezone": {
         "name": "tz",
