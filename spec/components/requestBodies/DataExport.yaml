@@ -1,6 +1,0 @@
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/DataExport"
-description: Data Export Request
-required: true
