@@ -74,7 +74,7 @@ components:
 
 paths:
   '/customers/{id}/summary-metrics':
-    $ref: './paths/customers@{customerId}@summary-metrics.yaml'
+    $ref: './paths/customers@{id}@summary-metrics.yaml'
   /data-exports:
     $ref: ./paths/data-exports.yaml
   '/data-exports/{id}':
@@ -128,4 +128,4 @@ paths:
   /reports/transactions:
     $ref: ./paths/reports@transactions.yaml
   '/subscriptions/{id}/summary-metrics':
-    $ref: './paths/subscriptions@{subscriptionId}@summary-metrics.yaml'
+    $ref: './paths/subscriptions@{id}@summary-metrics.yaml'
