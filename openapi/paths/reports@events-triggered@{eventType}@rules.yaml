@@ -1,4 +1,20 @@
 parameters:
+  - name: eventType
+    in: path
+    required: true
+    description: The system event type
+    schema:
+      type: string
+      enum:
+        - dispute-created
+        - gateway-account-requested
+        - transaction-processed
+        - subscription-canceled
+        - subscription-renewed
+        - payment-card-expired
+        - payment-declined
+        - transaction-process-requested
+        - risk-score-changed
   - $ref: ../components/parameters/organizationId.yaml
 get:
   tags:
@@ -8,22 +24,6 @@ get:
   description: |
     Retrieve a rules matched summary report by events triggered.
   parameters:
-    - name: eventType
-      in: path
-      required: true
-      description: The system event type
-      schema:
-        type: string
-        enum:
-          - dispute-created
-          - gateway-account-requested
-          - transaction-processed
-          - subscription-canceled
-          - subscription-renewed
-          - payment-card-expired
-          - payment-declined
-          - transaction-process-requested
-          - risk-score-changed
     - name: periodStart
       in: query
       description: Report start date
