@@ -73,7 +73,7 @@ components:
       $ref: components/securitySchemes/RebAuth.yaml
 
 paths:
-  '/customers/{customerId}/summary-metrics':
+  '/customers/{id}/summary-metrics':
     $ref: './paths/customers@{customerId}@summary-metrics.yaml'
   /data-exports:
     $ref: ./paths/data-exports.yaml
@@ -127,5 +127,5 @@ paths:
     $ref: ./paths/reports@transactions-time-dispute.yaml
   /reports/transactions:
     $ref: ./paths/reports@transactions.yaml
-  '/subscriptions/{subscriptionId}/summary-metrics':
+  '/subscriptions/{id}/summary-metrics':
     $ref: './paths/subscriptions@{subscriptionId}@summary-metrics.yaml'
