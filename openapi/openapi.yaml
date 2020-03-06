@@ -85,8 +85,8 @@ paths:
     $ref: ./paths/organizations.yaml
   '/organizations/{id}':
     $ref: './paths/organizations@{id}.yaml'
-  /report/payments-success-by-decline-reason:
-    $ref: ./paths/report@payments-success-by-decline-reason.yaml
+  /reports/payments-success-by-decline-reason:
+    $ref: ./paths/reports@payments-success-by-decline-reason.yaml
   /reports/api-log-summary:
     $ref: ./paths/reports@api-log-summary.yaml
   /reports/cumulative-subscriptions-plans:
