@@ -117,8 +117,6 @@ paths:
     $ref: ./paths/reports@statistics.yaml
   /reports/subscription-cancellation:
     $ref: ./paths/reports@subscription-cancellation.yaml
-  /reports/subscription-renewal-list:
-    $ref: ./paths/reports@subscription-renewal-list.yaml
   /reports/subscription-renewal:
     $ref: ./paths/reports@subscription-renewal.yaml
   /reports/time-series-transaction:
