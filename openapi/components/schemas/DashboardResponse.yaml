@@ -10,6 +10,29 @@ items:
         - salesCount
         - salesValue
         - refundsValue
+        - chargebacksCount
+        - chargebacksValue
+        - transactionsCount
+        - redeemedCouponsCount
+        - newLeadsCount
+        - newCustomersCount
+        - appliedCouponsCount
+        - trialConversionsCount
+        - trialConversionsRate
+        - renewalSuccessRate
+        - renewalsCount
+        - newTrialsCount
+        - reactivationsCount
+        - successfulRetriesCount
+        - invoicedRevenue
+        - churnCount
+        - churnRate
+        - cancellationsCount
+        - cancellationsRate
+        - activeSubscriptionsCount
+        - newSubscriptionsCount
+        - upgradesCount
+        - downgradesCount
     humanName:
       type: string
       description: Metric name to display
